@@ -40,16 +40,11 @@
       font-family: Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      transition: background 0.3s ease, color 0.3s ease;
     }
 
     a {
       color: var(--accent-dark);
       text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     nav {
@@ -74,15 +69,11 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 28px;
-      margin: 0;
-      padding: 0;
-      align-items: center;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
     nav li a {
-      font-weight: 500;
       color: var(--text);
     }
 
@@ -92,18 +83,10 @@
       right: 20px;
       z-index: 2000;
       background: var(--card);
-      color: var(--text);
       border: 1px solid var(--border);
-      padding: 12px 14px;
+      padding: 12px;
       border-radius: 50%;
       cursor: pointer;
-      font-size: 18px;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-    }
-
-    #theme-toggle:hover {
-      transform: scale(1.05);
     }
 
     header {
@@ -123,28 +106,23 @@
       height: 170px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid rgba(255,255,255,0.35);
       margin-bottom: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
     }
 
     header h1 {
       font-size: 58px;
-      margin: 0 0 16px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      margin-bottom: 16px;
     }
 
     header p {
       max-width: 850px;
       font-size: 22px;
       line-height: 1.6;
-      margin: 0 auto 14px;
     }
 
     .hero-sub {
       font-size: 18px;
       opacity: 0.95;
-      max-width: 850px;
     }
 
     section {
@@ -154,9 +132,8 @@
     }
 
     h2 {
-      font-size: 42px;
       text-align: center;
-      margin-bottom: 18px;
+      font-size: 42px;
     }
 
     .section-intro {
@@ -164,90 +141,33 @@
       color: var(--muted);
       max-width: 780px;
       margin: 0 auto 40px;
-      font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
-    .about-box {
+    .about-box,
+    .card,
+    .skills-box,
+    .timeline-item,
+    .contact-box {
       background: var(--card);
-      padding: 36px;
+      padding: 30px;
       border-radius: 24px;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
-      line-height: 1.9;
-      font-size: 18px;
+    }
+
+    .grid,
+    .skills-columns {
+      display: grid;
+      gap: 24px;
     }
 
     .grid {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 24px;
-      margin-bottom: 14px;
-    }
-
-    .card p {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    .tags {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background: rgba(108,123,255,0.12);
-      color: var(--accent-dark);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
     }
 
     .skills-columns {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-    }
-
-    .skills-box {
-      background: var(--card);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .skills-box h3 {
-      margin-top: 0;
-      color: var(--accent-dark);
-    }
-
-    .skills-box ul {
-      padding-left: 18px;
-      line-height: 1.9;
-      color: var(--muted);
     }
 
     .timeline {
@@ -255,43 +175,45 @@
       gap: 20px;
     }
 
-    .timeline-item {
-      background: var(--card);
-      padding: 28px;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .timeline-item h3 {
-      margin: 0 0 8px;
-    }
-
-    .timeline-item p {
+    .card p,
+    .timeline-item p,
+    .skills-box ul {
       color: var(--muted);
       line-height: 1.8;
-      margin: 0 0 10px;
+    }
+
+    .skills-box ul {
+      padding-left: 18px;
     }
 
     .timeline-item strong {
       color: var(--accent-dark);
     }
 
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: rgba(108,123,255,0.12);
+      color: var(--accent-dark);
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
     .contact-box {
       text-align: center;
-      background: var(--card);
-      padding: 40px 24px;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
       flex-wrap: wrap;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
     .contact-links a {
@@ -299,393 +221,240 @@
       color: white;
       padding: 12px 18px;
       border-radius: 999px;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .contact-links a:hover {
-      opacity: 0.9;
-      text-decoration: none;
     }
 
     footer {
       text-align: center;
-      padding: 40px 20px 60px;
+      padding: 40px;
       color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 16px 20px;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav ul {
-        gap: 16px;
-        justify-content: center;
-      }
-
-      header h1 {
-        font-size: 42px;
-      }
-
-      header p {
-        font-size: 18px;
-      }
-
-      h2 {
-        font-size: 34px;
-      }
     }
   </style>
 </head>
 
 <body>
-  <button id="theme-toggle">⚙️</button>
 
-  <nav>
-    <div class="logo">Veronica Pasqualin</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Case Studies</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#languages">Languages</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<button id="theme-toggle">⚙️</button>
 
-  <header>
-    <img src="profile.jpg" alt="Veronica Pasqualin" class="profile-photo">
-    <h1>Veronica Pasqualin</h1>
-    <p>International Digital Marketing Manager | SEO | PPC | GEO | AI-driven Search</p>
-    <p class="hero-sub">
-      Helping brands stay visible across traditional search engines and emerging AI-driven discovery platforms through data, localisation and international growth strategies.
+<nav>
+  <div class="logo">Veronica Pasqualin</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Case Studies</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#languages">Languages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <img src="profile.jpg" alt="Veronica Pasqualin">
+  <h1>Veronica Pasqualin</h1>
+  <p>International Digital Marketing Manager | SEO | PPC | GEO | AI-driven Search</p>
+  <p class="hero-sub">
+    Helping brands stay visible across traditional search engines and emerging AI-driven discovery platforms.
+  </p>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p class="section-intro">
+    International Digital Marketing Manager with 8+ years of experience across PPC, SEO, GEO and AI-driven search.
+  </p>
+
+  <div class="about-box">
+    <p>
+      I work at the intersection of international marketing, search strategy, analytics and AI.
+      My focus is helping brands stay discoverable across search engines and AI ecosystems.
     </p>
-  </header>
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p class="section-intro">
-      International Digital Marketing Manager with 8+ years of experience across PPC, SEO and the evolving landscape of GEO, focused on data, AI and the future of search.
-    </p>
+<section id="projects">
+  <h2>Case Studies</h2>
 
-    <div class="about-box">
-      <p>
-        I have worked across international marketing projects involving campaign performance, localisation, analytics and strategic optimisation across EMEA and APAC markets.
-      </p>
-
-      <p>
-        My experience spans SaaS, automotive, enterprise, sports, retail and technology sectors, supporting brands including UiPath, Liverpool FC, Hyundai, Rockwell Automation, Genesys, Evident, SuperOffice, Bonhams, Merrell and Saucony.
-      </p>
-
-      <p>
-        I’m currently completing an MSc in Artificial Intelligence, specialising in machine learning, NLP, large language models, probabilistic models and search systems.
-      </p>
+  <div class="grid">
+    <div class="card">
+      <h3>International Search Expansion</h3>
+      <p>Built multi-market growth strategies across EMEA and APAC.</p>
     </div>
-  </section>
 
-  <section id="projects">
-    <h2>Case Studies</h2>
-    <p class="section-intro">
-      Selected examples of international growth, search optimisation and AI-ready visibility strategies.
+    <div class="card">
+      <h3>AI Discoverability & GEO</h3>
+      <p>Improved brand visibility through entity optimisation and AI search readiness.</p>
+    </div>
+
+    <div class="card">
+      <h3>CRO & Lead Optimisation</h3>
+      <p>Improved lead quality and conversion rates through funnel optimisation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-columns">
+
+    <div class="skills-box">
+      <h3>Paid Media</h3>
+      <ul>
+        <li>Google Ads</li>
+        <li>Microsoft Ads</li>
+        <li>Search Ads 360</li>
+        <li>Meta Ads Manager</li>
+        <li>LinkedIn Ads</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>SEO & GEO</h3>
+      <ul>
+        <li>Technical SEO</li>
+        <li>Keyword Research</li>
+        <li>Generative Engine Optimisation</li>
+        <li>Entity Visibility</li>
+        <li>Structured Data</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>Analytics</h3>
+      <ul>
+        <li>GA4</li>
+        <li>Google Search Console</li>
+        <li>SEMrush</li>
+        <li>Ahrefs</li>
+        <li>Similarweb</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>AI & Programming</h3>
+      <ul>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Scikit-learn</li>
+        <li>PyTorch</li>
+        <li>LLMs</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>Senior International Digital Campaign Manager</h3>
+      <p><strong><a href="https://www.havasmarket.com/" target="_blank">Havas Market</a></strong> | 2021 – Present</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Digital Marketing & Content Specialist</h3>
+      <p><strong><a href="https://www.digital360.it/" target="_blank">Digital 360</a></strong> | 2021</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Digital Marketing & Content Strategist</h3>
+      <p><strong><a href="https://www.gabrielesaccenti.com/" target="_blank">Gabriele Saccenti SRL</a></strong> | 2019 – 2021</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Junior Marketing Communication Manager</h3>
+      <p><strong><a href="https://www.ballarini.it/" target="_blank">Ballarini (Zwilling Group)</a></strong> | 2018 – 2019</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>MSc Artificial Intelligence</h3>
+      <p><strong><a href="https://www.bath.ac.uk/" target="_blank">University of Bath</a></strong> | Ongoing</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Apprenticeship Level 3</h3>
+      <p><strong><a href="https://www.hyperisland.com/" target="_blank">Hyper Island</a></strong></p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>MSc Trade and Consumer Marketing</h3>
+      <p><strong><a href="https://www.unipr.it/" target="_blank">Università di Parma</a></strong></p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>BA International Marketing</h3>
+      <p><strong><a href="https://www.unipr.it/" target="_blank">Università di Parma</a></strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="languages">
+  <h2>Languages</h2>
+
+  <div class="skills-columns">
+    <div class="skills-box">
+      <h3>Italian</h3>
+      <ul><li>Native</li></ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>English</h3>
+      <ul><li>Fluent</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Connect</h2>
+  <p class="section-intro">
+    Open to new opportunities, collaborations and conversations around search, AI and digital growth.
+  </p>
+
+  <div class="contact-box">
+    <p>
+      If you're hiring, building something interesting, or simply want to connect and exchange ideas, feel free to reach out.
     </p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>International Search Expansion</h3>
-        <p>
-          Built multi-market search strategies across EMEA and APAC using localisation, keyword research, search trends and market opportunity frameworks.
-        </p>
-        <div class="tags">
-          <span class="tag">SEO</span>
-          <span class="tag">PPC</span>
-          <span class="tag">Localisation</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>GEO & AI Discoverability</h3>
-        <p>
-          Helped brands adapt to AI-driven discovery by improving entity visibility, structured content, AI-crawl accessibility and citation authority.
-        </p>
-        <div class="tags">
-          <span class="tag">GEO</span>
-          <span class="tag">LLMs</span>
-          <span class="tag">AI Search</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>CRO & Lead Quality Optimisation</h3>
-        <p>
-          Led CRO initiatives across landing pages, messaging and user journeys through structured A/B testing, performance analysis and funnel optimisation.
-        </p>
-        <div class="tags">
-          <span class="tag">CRO</span>
-          <span class="tag">GA4</span>
-          <span class="tag">Data Analysis</span>
-        </div>
-      </div>
+    <div class="contact-links">
+      <a href="https://github.com/veronicapasqualin" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/veronica-pasqualin/" target="_blank">LinkedIn</a>
+      <a href="mailto:pasqualin.veronica@gmail.com">Email</a>
+      <a href="https://calendly.com/pasqualin-veronica/let-s-connect" target="_blank">Let’s Connect</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <p class="section-intro">
-      A combination of strategic, analytical and technical skills across international marketing, search and AI-driven discovery.
-    </p>
+<footer>
+  © 2026 Veronica Pasqualin — Open to new opportunities in Search, AI and Digital Growth
+</footer>
 
-    <div class="skills-columns">
-      <div class="skills-box">
-        <h3>Paid Media</h3>
-        <ul>
-          <li>Google Ads</li>
-          <li>Microsoft Ads</li>
-          <li>Search Ads 360</li>
-          <li>Meta Ads Manager</li>
-          <li>LinkedIn Campaign Manager</li>
-          <li>TikTok Ads Manager</li>
-          <li>YouTube Ads</li>
-        </ul>
-      </div>
+<script>
+const toggle = document.getElementById("theme-toggle");
 
-      <div class="skills-box">
-        <h3>SEO & GEO</h3>
-        <ul>
-          <li>SEO Strategy</li>
-          <li>Technical SEO</li>
-          <li>Keyword Research</li>
-          <li>Generative Engine Optimisation</li>
-          <li>Search Localisation</li>
-          <li>Entity Visibility</li>
-          <li>Structured Data</li>
-          <li>Schema Markup</li>
-          <li>AI Search Readiness</li>
-        </ul>
-      </div>
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("dark");
+}
 
-      <div class="skills-box">
-        <h3>Analytics & Growth</h3>
-        <ul>
-          <li>Google Analytics 4</li>
-          <li>Google Tag Manager</li>
-          <li>Google Search Console</li>
-          <li>Looker Studio</li>
-          <li>SEMrush</li>
-          <li>Ahrefs</li>
-          <li>Screaming Frog SEO</li>
-          <li>Similarweb</li>
-          <li>Hotjar</li>
-          <li>Auction Insights</li>
-        </ul>
-      </div>
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 
-      <div class="skills-box">
-        <h3>CRM, CMS & Automation</h3>
-        <ul>
-          <li>HubSpot</li>
-          <li>Salesforce</li>
-          <li>Mailchimp</li>
-          <li>WordPress</li>
-          <li>Shopify</li>
-          <li>Elementor</li>
-        </ul>
-      </div>
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("theme","dark");
+  } else {
+    localStorage.setItem("theme","light");
+  }
+});
+</script>
 
-      <div class="skills-box">
-        <h3>AI & Technical</h3>
-        <ul>
-          <li>ChatGPT</li>
-          <li>Google Gemini</li>
-          <li>Perplexity</li>
-          <li>Claude</li>
-          <li>Large Language Models</li>
-          <li>AI-assisted workflows</li>
-        </ul>
-      </div>
-
-      <div class="skills-box">
-        <h3>Programming & Data</h3>
-        <ul>
-          <li>Python</li>
-          <li>Pandas</li>
-          <li>NumPy</li>
-          <li>Scikit-learn</li>
-          <li>PyTorch</li>
-          <li>Jupyter Notebook</li>
-          <li>GitHub</li>
-          <li>VS Code</li>
-        </ul>
-      </div>
-
-      <div class="skills-box">
-        <h3>Core Skills</h3>
-        <ul>
-          <li>International digital strategy</li>
-          <li>Market expansion</li>
-          <li>Localisation</li>
-          <li>Data analysis</li>
-          <li>Performance optimisation</li>
-          <li>Stakeholder communication</li>
-          <li>Client pitches and proposals</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <p class="section-intro">
-      My professional journey across international search, digital growth, content strategy and brand communication.
-    </p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Senior International Digital Campaign Manager</h3>
-        <p><strong>Havas Market — Remote</strong> | May 2021 – Present</p>
-        <p>
-          Led international search and visibility strategies across EMEA and APAC, supporting B2B and B2C brands through SEO, PPC, localisation, GEO and generative search optimisation.
-        </p>
-        <p>
-          Built data-driven growth strategies using GA4, Google Search Console, SEMrush and Similarweb, improving conversion efficiency, reducing acquisition costs and identifying scalable growth opportunities.
-        </p>
-        <p>
-          Coordinated freelancers, market specialists and internal teams for international campaign delivery, QA, strategic proposals and client pitches.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Digital Marketing & Content Specialist</h3>
-        <p><strong>Digital 360 — Remote</strong> | Jan 2021 – May 2021</p>
-        <p>
-          Developed inbound marketing strategies for digital transformation and ICT clients, including buyer personas, content pillars and editorial planning.
-        </p>
-        <p>
-          Built SEO-focused content strategies, managed digital PR and link-building activities, and created conversion-focused copy for landing pages, websites and email campaigns.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Digital Marketing & Content Strategist</h3>
-        <p><strong>Gabriele Saccenti SRL</strong> | Jan 2019 – May 2021</p>
-        <p>
-          Built integrated digital strategies across content, SEO and lead generation funnels.
-        </p>
-        <p>
-          Managed websites, landing pages and blog ecosystems, conducted SEO audits and keyword opportunity analysis, and used market intelligence tools to improve organic visibility.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Junior Marketing Communication Manager</h3>
-        <p><strong>Ballarini — Zwilling Group</strong> | Apr 2018 – Nov 2019</p>
-        <p>
-          Supported international marketing and communication activities for global consumer brands within the Zwilling Group.
-        </p>
-        <p>
-          Coordinated external creative agencies, catalogue production, point-of-sale materials, campaign assets, trade marketing initiatives, exhibitions and product communication workflows.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <p class="section-intro">
-      Academic background across artificial intelligence, marketing, leadership and international business.
-    </p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>MSc Artificial Intelligence — Ongoing</h3>
-        <p><strong>University of Bath</strong> | 2025 – Present</p>
-        <p>
-          Specialised in machine learning, NLP, large language models, probabilistic models and search systems.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Apprenticeship Level 3 — Team Leader and Supervisor</h3>
-        <p><strong>Hyper Island</strong> | 2022 – 2023</p>
-        <p>Completed with Distinction.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>MSc Trade and Consumer Marketing</h3>
-        <p><strong>Università di Parma</strong> | 2017 – 2020</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>BA International Marketing</h3>
-        <p><strong>Università di Parma</strong> | 2014 – 2017</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="languages">
-    <h2>Languages</h2>
-    <p class="section-intro">
-      Languages used across international professional environments.
-    </p>
-
-    <div class="skills-columns">
-      <div class="skills-box">
-        <h3>Italian</h3>
-        <ul>
-          <li>Native</li>
-        </ul>
-      </div>
-
-      <div class="skills-box">
-        <h3>English</h3>
-        <ul>
-          <li>Fluent</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="section-intro">
-      Open to international, AI-driven and strategic growth opportunities.
-    </p>
-
-    <div class="contact-box">
-      <p>You can connect with me or follow my portfolio journey below.</p>
-      <div class="contact-links">
-        <a href="https://github.com/veronicapasqualin" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/veronica-pasqualin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:pasqualin.veronica@gmail.com">Email</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Veronica Pasqualin — International Digital Marketing, Search & AI
-  </footer>
-
-  <script>
-    const toggle = document.getElementById("theme-toggle");
-
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark");
-    }
-
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-
-      if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
-    });
-  </script>
 </body>
-</html>
 </html>

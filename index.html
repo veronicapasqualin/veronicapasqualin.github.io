@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Veronica Pasqualin</title>
 
 <style>
@@ -12,7 +12,7 @@
   --card: #ffffff;
   --accent: #6c7bff;
   --accent-dark: #4d5de0;
-  --nav: rgba(255,255,255,0.92);
+  --nav: rgba(255,255,255,0.9);
   --shadow: 0 8px 24px rgba(0,0,0,0.08);
   --muted: #666;
   --border: #e6e8f0;
@@ -23,8 +23,8 @@ body.dark {
   --text: #f2f2f2;
   --card: #1b1d25;
   --accent: #8d96ff;
-  --accent-dark: #9aa2ff;
-  --nav: rgba(17,18,24,0.95);
+  --accent-dark: #6f79ff;
+  --nav: rgba(17,18,24,0.9);
   --shadow: 0 8px 24px rgba(0,0,0,0.35);
   --muted: #b7b7c2;
   --border: #2c2f3a;
@@ -43,12 +43,7 @@ body {
 }
 
 a {
-  color: var(--accent-dark);
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 nav {
@@ -61,84 +56,70 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
+  padding: 18px 30px;
 }
 
-nav .logo {
-  font-size: 24px;
+.logo {
+  font-size: 22px;
   font-weight: bold;
   color: var(--accent-dark);
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
   color: var(--text);
-  font-weight: 500;
 }
 
 .menu-toggle {
   display: none;
-  background: transparent;
-  border: none;
-  font-size: 30px;
-  color: var(--text);
+  font-size: 28px;
   cursor: pointer;
 }
 
 #theme-toggle {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  top: 20px;
+  right: 20px;
   z-index: 2000;
   background: var(--card);
   border: 1px solid var(--border);
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: var(--shadow);
 }
 
 header {
-  min-height: 88vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
-  text-align: center;
   background: linear-gradient(135deg, var(--accent), #9aa2ff);
   color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 header img {
-  width: 170px;
-  height: 170px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
+  margin-bottom: 20px;
   object-fit: cover;
-  margin-bottom: 24px;
 }
 
 header h1 {
-  font-size: 58px;
-  margin-bottom: 16px;
+  font-size: 56px;
 }
 
 header p {
-  max-width: 850px;
+  max-width: 800px;
   font-size: 22px;
-  line-height: 1.6;
-}
-
-.hero-sub {
-  font-size: 18px;
-  opacity: 0.95;
 }
 
 section {
@@ -149,90 +130,47 @@ section {
 
 h2 {
   text-align: center;
-  font-size: 42px;
+  font-size: 40px;
 }
 
 .section-intro {
   text-align: center;
   color: var(--muted);
-  max-width: 780px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
+  margin-bottom: 40px;
 }
 
-.about-box,
 .card,
+.about-box,
 .skills-box,
 .timeline-item,
 .contact-box {
   background: var(--card);
   padding: 30px;
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
 }
 
 .grid,
-.skills-columns {
+.skills-columns,
+.timeline {
   display: grid;
   gap: 24px;
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
 }
 
 .skills-columns {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card p,
-.about-box p,
-.timeline-item p {
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 12px;
-  background: var(--accent);
-  color: white;
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
-.project-link:hover {
-  background: var(--accent-dark);
-  text-decoration: none;
-}
-
-.skills-box ul {
-  padding-left: 18px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-.timeline {
-  display: grid;
-  gap: 20px;
-}
-
-.timeline-item strong {
-  color: var(--accent-dark);
-}
-
-.contact-box {
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
 .contact-links {
   display: flex;
-  justify-content: center;
   gap: 16px;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 
 .contact-links a {
@@ -242,60 +180,93 @@ h2 {
   border-radius: 999px;
 }
 
+.tool-card a {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--accent);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+}
+
+/* CHATBOT */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3000;
+}
+
+#chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#chatbot-window {
+  display: none;
+  flex-direction: column;
+  width: 320px;
+  height: 420px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  overflow: hidden;
+}
+
+#chatbot-header {
+  background: var(--accent);
+  color: white;
+  padding: 16px;
+}
+
+#chatbot-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+#chatbot-input {
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  width: 100%;
+}
+
 footer {
   text-align: center;
   padding: 40px;
   color: var(--muted);
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
-  nav {
-    padding: 16px 20px;
-  }
-
-  nav .logo {
-    font-size: 20px;
-  }
-
   .menu-toggle {
     display: block;
   }
 
   .nav-links {
-    display: none;
     position: absolute;
-    top: 66px;
-    left: 0;
-    width: 100%;
-    background: var(--nav);
-    border-bottom: 1px solid var(--border);
+    top: 70px;
+    right: 20px;
     flex-direction: column;
-    gap: 0;
-    padding: 12px 20px 20px;
+    background: var(--card);
+    width: 220px;
+    padding: 20px;
+    border-radius: 16px;
+    display: none;
   }
 
   .nav-links.active {
     display: flex;
-  }
-
-  .nav-links li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
-
-  header {
-    min-height: auto;
-    padding: 70px 20px;
-  }
-
-  header img {
-    width: 130px;
-    height: 130px;
   }
 
   header h1 {
@@ -306,20 +277,9 @@ footer {
     font-size: 18px;
   }
 
-  h2 {
-    font-size: 32px;
-  }
-
-  section {
-    margin: 60px auto;
-  }
-
-  .about-box,
-  .card,
-  .skills-box,
-  .timeline-item,
-  .contact-box {
-    padding: 24px;
+  #chatbot-window {
+    width: 90vw;
+    right: 0;
   }
 }
 </style>
@@ -332,210 +292,116 @@ footer {
 <nav>
   <div class="logo">Veronica Pasqualin</div>
 
-  <button class="menu-toggle" id="menu-toggle">☰</button>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
 
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Case Studies</a></li>
+    <li><a href="#tools">Tools</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#languages">Languages</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <header>
-  <img src="profile.jpg" alt="Veronica Pasqualin">
+  <img src="profile.jpg" alt="Veronica">
   <h1>Veronica Pasqualin</h1>
   <p>International Digital Marketing Manager | SEO | PPC | GEO | AI-driven Search</p>
-  <p class="hero-sub">
-    Helping brands stay visible across traditional search engines and emerging AI-driven discovery platforms.
-  </p>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
   <p class="section-intro">
-    International Digital Marketing Manager with 8+ years of experience across PPC, SEO, GEO and AI-driven search.
+    International Digital Marketing Manager with 8+ years across PPC, SEO, GEO and AI-driven search.
   </p>
-
   <div class="about-box">
-    <p>
-      I work at the intersection of international search, performance marketing, analytics and AI.
-      My focus is helping brands stay discoverable across both traditional and AI-powered search ecosystems.
-    </p>
+    Helping brands stay visible across traditional search and AI-powered discovery ecosystems.
   </div>
 </section>
 
 <section id="projects">
   <h2>Case Studies</h2>
-  <p class="section-intro">
-    Selected portfolio projects showing how I combine international search strategy, data analysis and AI-driven decision making.
-  </p>
-
   <div class="grid">
-
     <div class="card">
-      <h3>Market Expansion Revenue Predictor</h3>
-      <p>
-        Built an interactive regression-based dashboard to simulate international market expansion scenarios,
-        forecasting clicks, conversions, revenue, CPA, ROAS and profitability based on budget and market conditions.
-      </p>
-      <a href="https://international-revenue-predictor-ncyvdmrivaappxspexkgoql.streamlit.app/" target="_blank" class="project-link">
-        View Live Dashboard →
-      </a>
+      <h3>International Search Expansion</h3>
+      <p>Built multi-market search strategies across EMEA and APAC.</p>
     </div>
 
     <div class="card">
       <h3>AI Search Visibility</h3>
-      <p>
-        Optimised entity visibility, structured content and AI discoverability across evolving search ecosystems.
-      </p>
+      <p>Optimised entity visibility and AI discoverability.</p>
     </div>
 
     <div class="card">
       <h3>CRO & Lead Optimisation</h3>
-      <p>
-        Improved conversion quality through landing page optimisation, funnel analysis and user journey improvements.
-      </p>
+      <p>Improved conversion quality and funnel efficiency.</p>
     </div>
+  </div>
+</section>
 
+<section id="tools">
+  <h2>Interactive Tools</h2>
+  <p class="section-intro">
+    Explore practical models and forecasting tools built with Python and Streamlit.
+  </p>
+
+  <div class="grid">
+    <div class="card tool-card">
+      <h3>Market Expansion Revenue Predictor</h3>
+      <p>
+        Interactive dashboard to forecast clicks, conversions, CPA, ROAS and revenue by market using regression and scenario modelling.
+      </p>
+      <a href="https://international-revenue-predictor-ncyvdmrivaappxspexkgoql.streamlit.app/" target="_blank">
+        Open Dashboard
+      </a>
+    </div>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-
   <div class="skills-columns">
     <div class="skills-box">
       <h3>Paid Media</h3>
-      <ul>
-        <li>Google Ads</li>
-        <li>Microsoft Ads</li>
-        <li>Search Ads 360</li>
-        <li>Meta Ads Manager</li>
-        <li>LinkedIn Campaign Manager</li>
-        <li>TikTok Ads Manager</li>
-      </ul>
+      <p>Google Ads, Microsoft Ads, Meta, LinkedIn, TikTok</p>
     </div>
 
     <div class="skills-box">
       <h3>SEO & GEO</h3>
-      <ul>
-        <li>Technical SEO</li>
-        <li>Keyword Research</li>
-        <li>Generative Engine Optimisation</li>
-        <li>Entity Optimisation</li>
-        <li>Structured Data</li>
-      </ul>
+      <p>Technical SEO, Entity optimisation, Structured Data</p>
     </div>
 
     <div class="skills-box">
       <h3>Analytics</h3>
-      <ul>
-        <li>GA4</li>
-        <li>Google Search Console</li>
-        <li>SEMrush</li>
-        <li>Ahrefs</li>
-        <li>Similarweb</li>
-      </ul>
+      <p>GA4, GSC, SEMrush, Ahrefs, Similarweb</p>
     </div>
 
     <div class="skills-box">
       <h3>AI & Programming</h3>
-      <ul>
-        <li>Python</li>
-        <li>Pandas</li>
-        <li>Scikit-learn</li>
-        <li>PyTorch</li>
-        <li>LLMs</li>
-      </ul>
+      <p>Python, Pandas, Scikit-learn, PyTorch, LLMs</p>
     </div>
   </div>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
-
   <div class="timeline">
-
     <div class="timeline-item">
       <h3>Senior International Digital Campaign Manager</h3>
-      <p><strong><a href="https://www.havasmarket.com/" target="_blank">Havas Market</a></strong> | 2021 – Present</p>
+      <p>Havas Market | 2021 – Present</p>
     </div>
 
     <div class="timeline-item">
-      <h3>Digital Marketing & Content Specialist</h3>
-      <p><strong><a href="https://www.digital360.it/" target="_blank">Digital 360</a></strong> | 2021</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Digital Marketing & Content Strategist</h3>
-      <p><strong><a href="https://www.gabrielesaccenti.com/" target="_blank">Gabriele Saccenti SRL</a></strong> | 2019 – 2021</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Junior Marketing Communication Manager</h3>
-      <p><strong><a href="https://www.ballarini.it/" target="_blank">Ballarini</a></strong> | 2018 – 2019</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>MSc Artificial Intelligence</h3>
-      <p><strong><a href="https://www.bath.ac.uk/" target="_blank">University of Bath</a></strong></p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Apprenticeship Level 3</h3>
-      <p><strong><a href="https://www.hyperisland.com/" target="_blank">Hyper Island</a></strong></p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>MSc Trade and Consumer Marketing</h3>
-      <p><strong><a href="https://www.unipr.it/" target="_blank">Università di Parma</a></strong></p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>BA International Marketing</h3>
-      <p><strong><a href="https://www.unipr.it/" target="_blank">Università di Parma</a></strong></p>
-    </div>
-  </div>
-</section>
-
-<section id="languages">
-  <h2>Languages</h2>
-
-  <div class="skills-columns">
-    <div class="skills-box">
-      <h3>Italian</h3>
-      <ul><li>Native</li></ul>
-    </div>
-
-    <div class="skills-box">
-      <h3>English</h3>
-      <ul><li>Fluent</li></ul>
+      <h3>Digital Marketing Specialist</h3>
+      <p>Digital 360 | 2021</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Let’s Connect</h2>
-  <p class="section-intro">
-    Open to new opportunities, collaborations and conversations around search, AI and digital growth.
-  </p>
-
   <div class="contact-box">
-    <p>
-      If you're hiring, building something interesting, or simply want to connect and exchange ideas.
-    </p>
-
     <div class="contact-links">
       <a href="https://github.com/veronicapasqualin" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/veronica-pasqualin/" target="_blank">LinkedIn</a>
@@ -546,8 +412,18 @@ footer {
 </section>
 
 <footer>
-  © 2026 Veronica Pasqualin — Open to new opportunities in Search, AI and Digital Growth
+© 2026 Veronica Pasqualin
 </footer>
+
+<div id="chatbot">
+  <button id="chatbot-toggle">💬</button>
+
+  <div id="chatbot-window">
+    <div id="chatbot-header">Ask me about Veronica</div>
+    <div id="chatbot-messages"></div>
+    <input id="chatbot-input" placeholder="Ask a question..." />
+  </div>
+</div>
 
 <script>
 const toggle = document.getElementById("theme-toggle");
@@ -560,29 +436,47 @@ if (localStorage.getItem("theme") === "dark") {
 
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
 });
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-
-  if (navLinks.classList.contains("active")) {
-    menuToggle.textContent = "×";
-  } else {
-    menuToggle.textContent = "☰";
-  }
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    menuToggle.textContent = "☰";
-  });
+const chatbotToggle = document.getElementById("chatbot-toggle");
+const chatbotWindow = document.getElementById("chatbot-window");
+const chatbotInput = document.getElementById("chatbot-input");
+const chatbotMessages = document.getElementById("chatbot-messages");
+
+chatbotToggle.addEventListener("click", () => {
+  chatbotWindow.style.display =
+    chatbotWindow.style.display === "flex" ? "none" : "flex";
+});
+
+const knowledgeBase = {
+  experience: "Veronica has 8+ years in international digital marketing.",
+  skills: "SEO, PPC, GEO, AI visibility, Python, Analytics.",
+  education: "Currently studying MSc Artificial Intelligence at University of Bath.",
+  contact: "Reach out via LinkedIn, GitHub, Email or Calendly."
+};
+
+chatbotInput.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const text = chatbotInput.value.toLowerCase();
+    let reply = "Try: experience, skills, education or contact.";
+
+    if (text.includes("experience")) reply = knowledgeBase.experience;
+    if (text.includes("skills")) reply = knowledgeBase.skills;
+    if (text.includes("education")) reply = knowledgeBase.education;
+    if (text.includes("contact")) reply = knowledgeBase.contact;
+
+    chatbotMessages.innerHTML += `<p><strong>You:</strong> ${chatbotInput.value}</p>`;
+    chatbotMessages.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+    chatbotInput.value = "";
+  }
 });
 </script>
 

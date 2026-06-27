@@ -12,7 +12,7 @@
   --card: #ffffff;
   --accent: #6c7bff;
   --accent-dark: #4d5de0;
-  --nav: rgba(255,255,255,0.85);
+  --nav: rgba(255,255,255,0.92);
   --shadow: 0 8px 24px rgba(0,0,0,0.08);
   --muted: #666;
   --border: #e6e8f0;
@@ -23,8 +23,8 @@ body.dark {
   --text: #f2f2f2;
   --card: #1b1d25;
   --accent: #8d96ff;
-  --accent-dark: #6f79ff;
-  --nav: rgba(17,18,24,0.85);
+  --accent-dark: #9aa2ff;
+  --nav: rgba(17,18,24,0.95);
   --shadow: 0 8px 24px rgba(0,0,0,0.35);
   --muted: #b7b7c2;
   --border: #2c2f3a;
@@ -70,27 +70,39 @@ nav .logo {
   color: var(--accent-dark);
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-nav li a {
+.nav-links li a {
   color: var(--text);
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: var(--text);
+  cursor: pointer;
 }
 
 #theme-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   z-index: 2000;
   background: var(--card);
   border: 1px solid var(--border);
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: var(--shadow);
 }
 
 header {
@@ -174,9 +186,26 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.timeline {
-  display: grid;
-  gap: 20px;
+.card p,
+.about-box p,
+.timeline-item p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--accent);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
 }
 
 .skills-box ul {
@@ -185,9 +214,9 @@ h2 {
   color: var(--muted);
 }
 
-.timeline-item p {
-  color: var(--muted);
-  line-height: 1.8;
+.timeline {
+  display: grid;
+  gap: 20px;
 }
 
 .timeline-item strong {
@@ -218,6 +247,81 @@ footer {
   padding: 40px;
   color: var(--muted);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  nav .logo {
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background: var(--nav);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 20px 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  header {
+    min-height: auto;
+    padding: 70px 20px;
+  }
+
+  header img {
+    width: 130px;
+    height: 130px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  header p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  section {
+    margin: 60px auto;
+  }
+
+  .about-box,
+  .card,
+  .skills-box,
+  .timeline-item,
+  .contact-box {
+    padding: 24px;
+  }
+}
 </style>
 </head>
 
@@ -227,7 +331,10 @@ footer {
 
 <nav>
   <div class="logo">Veronica Pasqualin</div>
-  <ul>
+
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Case Studies</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -263,22 +370,37 @@ footer {
 
 <section id="projects">
   <h2>Case Studies</h2>
+  <p class="section-intro">
+    Selected portfolio projects showing how I combine international search strategy, data analysis and AI-driven decision making.
+  </p>
 
   <div class="grid">
+
     <div class="card">
-      <h3>International Search Expansion</h3>
-      <p>Built multi-market search and localisation strategies across EMEA and APAC.</p>
+      <h3>Market Expansion Revenue Predictor</h3>
+      <p>
+        Built an interactive regression-based dashboard to simulate international market expansion scenarios,
+        forecasting clicks, conversions, revenue, CPA, ROAS and profitability based on budget and market conditions.
+      </p>
+      <a href="https://international-revenue-predictor-ncyvdmrivaappxspexkgoql.streamlit.app/" target="_blank" class="project-link">
+        View Live Dashboard →
+      </a>
     </div>
 
     <div class="card">
       <h3>AI Search Visibility</h3>
-      <p>Optimised entity visibility, structured content and AI discoverability.</p>
+      <p>
+        Optimised entity visibility, structured content and AI discoverability across evolving search ecosystems.
+      </p>
     </div>
 
     <div class="card">
       <h3>CRO & Lead Optimisation</h3>
-      <p>Improved conversion quality through landing page optimisation and funnel analysis.</p>
+      <p>
+        Improved conversion quality through landing page optimisation, funnel analysis and user journey improvements.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -429,6 +551,8 @@ footer {
 
 <script>
 const toggle = document.getElementById("theme-toggle");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
@@ -442,6 +566,23 @@ toggle.addEventListener("click", () => {
   } else {
     localStorage.setItem("theme", "light");
   }
+});
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+
+  if (navLinks.classList.contains("active")) {
+    menuToggle.textContent = "×";
+  } else {
+    menuToggle.textContent = "☰";
+  }
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.textContent = "☰";
+  });
 });
 </script>
 

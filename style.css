@@ -2,8 +2,8 @@
   --bg: #f8f9fc;
   --text: #222;
   --card: #ffffff;
-  --accent: #6c7bff;
-  --accent-dark: #4d5de0;
+  --accent: #8d96ff;
+  --accent-dark: #9aa2ff;
   --nav: rgba(255,255,255,0.92);
   --shadow: 0 8px 24px rgba(0,0,0,0.08);
   --muted: #666;
@@ -35,13 +35,15 @@ body {
 }
 
 a {
-  color: var(--accent-dark);
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
+/* NAV */
 
 nav {
   position: sticky;
@@ -59,7 +61,7 @@ nav {
 nav .logo {
   font-size: 24px;
   font-weight: bold;
-  color: var(--accent-dark);
+  color: var(--accent);
 }
 
 .nav-links {
@@ -75,63 +77,7 @@ nav .logo {
   font-weight: 500;
 }
 
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  font-size: 30px;
-  color: var(--text);
-  cursor: pointer;
-}
-
-#theme-toggle {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 2000;
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
-header {
-  min-height: 88vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, var(--accent), #9aa2ff);
-  color: white;
-}
-
-header img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 24px;
-}
-
-header h1 {
-  font-size: 58px;
-  margin-bottom: 16px;
-}
-
-header p {
-  max-width: 850px;
-  font-size: 22px;
-  line-height: 1.6;
-}
-
-.hero-sub {
-  font-size: 18px;
-  opacity: 0.95;
-}
+/* GLOBAL */
 
 section {
   max-width: 1100px;
@@ -139,18 +85,17 @@ section {
   padding: 0 20px;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 h2 {
-  text-align: center;
   font-size: 42px;
 }
 
-.section-intro {
-  text-align: center;
-  color: var(--muted);
-  max-width: 780px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
-}
+/* CARDS */
 
 .about-box,
 .card,
@@ -164,18 +109,10 @@ h2 {
   border: 1px solid var(--border);
 }
 
-.grid,
-.skills-columns {
+.grid {
   display: grid;
   gap: 24px;
-}
-
-.grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.skills-columns {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .card p,
@@ -184,6 +121,8 @@ h2 {
   color: var(--muted);
   line-height: 1.8;
 }
+
+/* BUTTONS */
 
 .project-link {
   display: inline-block;
@@ -195,6 +134,11 @@ h2 {
   font-weight: 600;
 }
 
+.project-link:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
+}
+
 .project-actions {
   display: flex;
   flex-direction: column;
@@ -203,93 +147,12 @@ h2 {
   align-items: flex-start;
 }
 
-.secondary-link {
-  background: var(--accent);
-  color: white;
-}
-
-.project-link:hover {
-  background: var(--accent-dark);
-  text-decoration: none;
-}
-
-.skills-box ul {
-  padding-left: 18px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-.timeline {
-  display: grid;
-  gap: 20px;
-}
-
-.timeline-item strong {
-  color: var(--accent-dark);
-}
-
-.contact-box {
-  text-align: center;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.contact-links a {
-  background: var(--accent);
-  color: white;
-  padding: 12px 18px;
-  border-radius: 999px;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  color: var(--muted);
-}
-
-.assistant-cta {
-  text-align: center;
-  background: linear-gradient(135deg, #6c7bff, #9aa2ff);
-  color: white;
-  padding: 50px 30px;
-  border-radius: 28px;
-  box-shadow: 0 18px 45px rgba(108,123,255,0.35);
-  max-width: 620px;
-  margin: 0 auto;
-}
-
-.assistant-cta h2 {
-  color: white;
-  margin-top: 0;
-}
-
-.assistant-button {
-  display: inline-block;
-  background: white;
-  color: #4d5de0 !important;
-  padding: 16px 30px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 17px;
-}
-
-.assistant-button:hover {
-  text-decoration: none;
-  transform: translateY(-2px);
-}
-
 /* PLAYBOOK PAGE */
 
 .playbook-page {
   width: min(900px, 90%);
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 70px 0 120px;
 }
 
 .playbook-label {
@@ -328,21 +191,19 @@ footer {
   margin-top: 40px;
   margin-bottom: 12px;
   color: var(--accent);
-  font-size: 1.2rem;
 }
 
-.playbook-intro {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  max-width: 700px;
-  color: var(--muted);
-}
-
+.playbook-intro,
 .playbook-page p,
 .playbook-page li {
   color: var(--muted);
   line-height: 1.9;
   font-size: 1.05rem;
+}
+
+.playbook-intro {
+  font-size: 1.2rem;
+  max-width: 720px;
 }
 
 .playbook-image {
@@ -354,6 +215,8 @@ footer {
 .playbook-page ul {
   padding-left: 20px;
 }
+
+/* TOOLS */
 
 .tools-grid {
   display: flex;
@@ -368,10 +231,18 @@ footer {
   padding: 10px 14px;
   border-radius: 999px;
   color: var(--text);
-  font-size: 0.9rem;
 }
 
-/* Mobile */
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
+
+/* MOBILE */
+
 @media (max-width: 768px) {
   nav {
     padding: 16px 20px;
@@ -381,72 +252,13 @@ footer {
     font-size: 20px;
   }
 
-  .menu-toggle {
-    display: block;
-  }
-
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 66px;
-    left: 0;
-    width: 100%;
-    background: var(--nav);
-    border-bottom: 1px solid var(--border);
-    flex-direction: column;
-    gap: 0;
-    padding: 12px 20px 20px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
-
-  header {
-    min-height: auto;
-    padding: 70px 20px;
-  }
-
-  header img {
-    width: 130px;
-    height: 130px;
-  }
-
-  header h1 {
-    font-size: 36px;
-  }
-
-  header p {
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  section {
-    margin: 60px auto;
-  }
-
-  .about-box,
-  .card,
-  .skills-box,
-  .timeline-item,
-  .contact-box {
-    padding: 24px;
+    gap: 14px;
+    flex-wrap: wrap;
   }
 
   .playbook-page {
-    padding: 90px 20px;
+    padding: 60px 20px;
   }
 
   .playbook-page h1 {

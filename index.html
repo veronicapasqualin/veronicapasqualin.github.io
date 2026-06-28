@@ -202,7 +202,18 @@ h2 {
   border-radius: 999px;
   font-weight: 600;
 }
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
 
+.secondary-link {
+  background: transparent;
+  border: 1px solid rgba(139, 92, 246, 0.8);
+  color: #c4b5fd;
+}
 .project-link:hover {
   background: var(--accent-dark);
   text-decoration: none;
@@ -421,9 +432,15 @@ footer {
         Built an interactive regression-based dashboard to simulate international market expansion scenarios,
         forecasting clicks, conversions, revenue, CPA, ROAS and profitability based on budget and market conditions.
       </p>
-      <a href="https://international-revenue-predictor-ncyvdmrivaappxspexkgoql.streamlit.app/" target="_blank" class="project-link">
-        View Live Dashboard →
-      </a>
+      <div class="project-actions">
+  <a href="international-revenue-predictor.html" class="project-link">
+    View Live Dashboard →
+  </a>
+
+  <a href="market-entry-strategy.html" class="project-link secondary-link">
+    View Strategy Approach →
+  </a>
+</div>
     </div>
 
     <div class="card">

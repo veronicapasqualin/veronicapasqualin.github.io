@@ -247,7 +247,41 @@ footer {
   padding: 40px;
   color: var(--muted);
 }
+.assistant-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #6c7bff, #9aa2ff);
+  color: white;
+  padding: 50px 30px;
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(108,123,255,0.35);
+}
 
+.assistant-cta h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.assistant-cta p {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.assistant-button {
+  display: inline-block;
+  background: white;
+  color: #4d5de0 !important;
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.assistant-button:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
 /* Mobile */
 @media (max-width: 768px) {
   nav {
@@ -337,7 +371,7 @@ footer {
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Case Studies</a></li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#tools">Veronica AI Assistant</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
@@ -402,27 +436,20 @@ footer {
       </p>
     </div>
 
+<section id="tools">
+  <div class="assistant-cta">
+    <h2>🤖 Veronica AI Assistant</h2>
+
+    <p>
+      Chat with my AI-powered portfolio assistant to explore my experience, skills,
+      projects, AI work and market expansion tools.
+    </p>
+
+    <a href="https://chatbot-veronica-cqjvzn7tavyrs66rx2femr.streamlit.app/" target="_blank" class="assistant-button">
+      Chat with Veronica AI →
+    </a>
   </div>
 </section>
-<section id="tools">
-  <h2>Interactive Tools</h2>
-
-  <p class="section-intro">
-    Explore some practical tools and AI products I built using Python, Streamlit and OpenAI.
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>AI Portfolio Assistant</h3>
-      <p>
-        An interactive AI assistant trained on my professional background, projects, skills and experience.
-      </p>
-
-      <a href="https://chatbot-veronica-cqjvzn7tavyrs66rx2femr.streamlit.app/" target="_blank">
-        Open AI Assistant
-      </a>
-    </div>
 
   </div>
 </section>

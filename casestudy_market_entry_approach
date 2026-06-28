@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Data-led Market Entry Strategy | Veronica Pasqualin</title>
+  <meta name="description" content="A data-led market entry strategy framework combining search demand, first-party data, economic signals and localisation readiness." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="case-study-page">
+    <a href="index.html" class="back-link">← Back to portfolio</a>
+
+    <article class="case-study-article">
+
+      <p class="case-label">Growth Playbook</p>
+
+      <h1>Data-led Market Entry Strategy</h1>
+
+      <img 
+        src="images/my-approach-market-entry.png" 
+        alt="My Approach: Data-led framework for smarter market entry" 
+        class="case-image"
+      />
+
+      <p class="case-intro">
+        Identifying high-potential international markets through search demand,
+        first-party data, economic signals and localisation readiness.
+      </p>
+
+      <section>
+        <h2>Overview</h2>
+
+        <p>
+          Expanding into new markets is rarely just about demand.
+          It requires understanding where opportunity, consumer readiness and operational feasibility overlap.
+        </p>
+
+        <p>
+          I developed a structured framework to evaluate which international markets offered
+          the strongest potential for expansion. The objective was to reduce risk by combining
+          search intelligence, economic signals, first-party data and localisation complexity
+          into a clear strategic model.
+        </p>
+      </section>
+
+      <section>
+        <h2>The Challenge</h2>
+
+        <p>
+          International expansion often fails because market prioritisation is based on assumptions.
+          Surface-level signals such as population size or competitor presence rarely tell the full story.
+        </p>
+
+        <p>
+          The challenge was to identify markets with the strongest balance of demand,
+          economic stability, localisation feasibility and existing traffic signals.
+        </p>
+      </section>
+
+      <section>
+        <h2>My Approach</h2>
+
+        <p>
+          I use a structured framework to evaluate international growth opportunities,
+          combining search intelligence, economic signals, first-party data and localisation
+          complexity to reduce market entry risk and prioritise scalable expansion.
+        </p>
+
+        <h3>1. Market Sizing & Growth Signals</h3>
+        <p>
+          Analysing category demand, search trends, growth momentum and cost-efficiency
+          signals across markets to identify scalable opportunities.
+        </p>
+
+        <h3>2. Economic & Demographic Validation</h3>
+        <p>
+          Validating market readiness by analysing GDP trends, unemployment, purchasing power
+          and audience demographics.
+        </p>
+
+        <h3>3. First-party Data Validation</h3>
+        <p>
+          Where available, I use first-party data such as GA4 to identify whether the brand is already
+          receiving traffic, engagement or conversions from specific countries, regions or cities.
+          This helps validate existing demand before investing in a new market.
+        </p>
+
+        <h3>4. Industry Landscape Analysis</h3>
+        <p>
+          Assessing market maturity, online versus offline revenue trends, pricing stability,
+          competitive density and whitespace opportunities.
+        </p>
+
+        <h3>5. Search Intent Mapping</h3>
+        <p>
+          Mapping branded and non-branded search demand, seasonality, local language behaviour
+          and consumer terminology to align strategy with real search intent.
+        </p>
+
+        <h3>6. Go-to-Market Prioritisation</h3>
+        <p>
+          Ranking markets based on opportunity size, localisation effort and execution complexity,
+          grouping them into quick wins, medium-effort opportunities and higher-effort bets.
+        </p>
+      </section>
+
+      <section>
+        <h2>Tools Used</h2>
+
+        <div class="tools-grid">
+          <span>Google Market Finder</span>
+          <span>Google Trends</span>
+          <span>SEMrush</span>
+          <span>Statista</span>
+          <span>Google Keyword Planner</span>
+          <span>GA4</span>
+          <span>Google Search Console</span>
+          <span>Looker Studio</span>
+          <span>Excel</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Outcome</h2>
+
+        <ul>
+          <li>Identified underserved international markets with strong growth potential</li>
+          <li>Reduced expansion risk through data-led validation</li>
+          <li>Improved localisation efficiency by prioritising market readiness</li>
+          <li>Created scalable international growth roadmaps</li>
+          <li>Aligned acquisition strategy with real consumer demand and market maturity</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Related Project</h2>
+
+        <p>
+          This strategic framework can also connect to predictive modelling to estimate
+          international revenue potential and support investment decisions.
+        </p>
+
+        <a href="international-revenue-predictor.html" class="case-button">
+          View International Revenue Predictor Dashboard →
+        </a>
+      </section>
+
+      <section>
+        <h2>Skills Applied</h2>
+
+        <div class="case-tags">
+          <span>Market Expansion</span>
+          <span>Growth Strategy</span>
+          <span>SEO</span>
+          <span>PPC</span>
+          <span>Search Intelligence</span>
+          <span>Localisation</span>
+          <span>Consumer Behaviour</span>
+          <span>Data Strategy</span>
+        </div>
+      </section>
+
+    </article>
+  </main>
+</body>
+</html>

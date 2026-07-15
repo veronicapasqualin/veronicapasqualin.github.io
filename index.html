@@ -257,6 +257,39 @@ footer {
   padding: 40px;
   color: var(--muted);
 }
+
+  footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
+
+/* ===== Skills & Tools ===== */
+
+.skills-group-title {
+  text-align: center;
+  font-size: 26px;
+  margin: 12px 0 28px;
+  color: var(--accent-dark);
+}
+
+.tools-title {
+  margin-top: 52px;
+}
+
+.core-skills-grid {
+  margin-bottom: 10px;
+}
+
+@media (max-width:768px){
+
+.skills-group-title{
+    font-size:23px;
+}
+
+}
+
+.assistant-cta {
 .assistant-cta {
   text-align: center;
   background: linear-gradient(135deg, #6c7bff, #9aa2ff);
@@ -495,9 +528,53 @@ footer {
   </div>
 </section>
 <section id="skills">
-  <h2>Skills</h2>
+  <h2>Skills &amp; Tools</h2>
+
+  <p class="section-intro">
+    Strategic, analytical and technical capabilities across international digital marketing,
+    artificial intelligence and digital growth.
+  </p>
+
+  <h3 class="skills-group-title">Core Skills</h3>
+
+  <div class="skills-columns core-skills-grid">
+
+    <div class="skills-box">
+      <h3>International Strategy</h3>
+      <ul>
+        <li>International digital strategy</li>
+        <li>Market expansion</li>
+        <li>Localisation</li>
+        <li>Multi-market campaign planning</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>Search &amp; Growth</h3>
+      <ul>
+        <li>SEO, PPC and GEO</li>
+        <li>Growth marketing</li>
+        <li>Conversion rate optimisation</li>
+        <li>Data analysis</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>AI &amp; Emerging Search</h3>
+      <ul>
+        <li>AI-assisted workflows</li>
+        <li>Large Language Models</li>
+        <li>AI-driven search visibility</li>
+        <li>Generative discovery strategy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 class="skills-group-title tools-title">Tools &amp; Platforms</h3>
 
   <div class="skills-columns">
+
     <div class="skills-box">
       <h3>Paid Media</h3>
       <ul>
@@ -507,41 +584,105 @@ footer {
         <li>Meta Ads Manager</li>
         <li>LinkedIn Campaign Manager</li>
         <li>TikTok Ads Manager</li>
+        <li>YouTube Ads</li>
       </ul>
     </div>
 
     <div class="skills-box">
-      <h3>SEO & GEO</h3>
+      <h3>Creative</h3>
       <ul>
-        <li>Technical SEO</li>
-        <li>Keyword Research</li>
-        <li>Generative Engine Optimisation</li>
-        <li>Entity Optimisation</li>
-        <li>Structured Data</li>
+        <li>Meta AI</li>
+        <li>Meta Business Suite</li>
+        <li>Canva</li>
+        <li>ElevenLabs</li>
+        <li>CapCut</li>
+        <li>Pippit AI</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>SEO &amp; Market Intelligence</h3>
+      <ul>
+        <li>Google Search Console</li>
+        <li>Screaming Frog SEO</li>
+        <li>SEMrush</li>
+        <li>Ahrefs</li>
+        <li>Similarweb</li>
+        <li>Google Market Explorer</li>
+        <li>Google Market Finder</li>
+        <li>Google Keyword Planner</li>
+        <li>Google Trends</li>
+        <li>AnswerThePublic</li>
+        <li>Google Lighthouse</li>
+        <li>Google PageSpeed Insights</li>
+        <li>Google Rich Results Test</li>
+        <li>Schema Markup Validator</li>
       </ul>
     </div>
 
     <div class="skills-box">
       <h3>Analytics</h3>
       <ul>
-        <li>GA4</li>
-        <li>Google Search Console</li>
-        <li>SEMrush</li>
-        <li>Ahrefs</li>
+        <li>Google Analytics 4</li>
+        <li>Google Tag Manager</li>
+        <li>Looker Studio</li>
+        <li>Hotjar</li>
+        <li>Market &amp; Auction Insights</li>
         <li>Similarweb</li>
+        <li>Microsoft Clarity</li>
       </ul>
     </div>
 
     <div class="skills-box">
-      <h3>AI & Programming</h3>
+      <h3>CRM</h3>
+      <ul>
+        <li>HubSpot</li>
+        <li>Salesforce</li>
+        <li>Mailchimp</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>CMS</h3>
+      <ul>
+        <li>WordPress</li>
+        <li>Shopify</li>
+        <li>Elementor</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>LLMs</h3>
+      <ul>
+        <li>ChatGPT</li>
+        <li>Google Gemini</li>
+        <li>Perplexity</li>
+        <li>Claude</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>Programming</h3>
       <ul>
         <li>Python</li>
         <li>Pandas</li>
+        <li>NumPy</li>
         <li>Scikit-learn</li>
         <li>PyTorch</li>
-        <li>LLMs</li>
+        <li>Jupyter Notebook</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
       </ul>
     </div>
+
+    <div class="skills-box">
+      <h3>Automation</h3>
+      <ul>
+        <li>Make</li>
+        <li>n8n</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -583,7 +724,7 @@ footer {
     </div>
 
     <div class="timeline-item">
-      <h3>Apprenticeship Level 3</h3>
+      <h3>Apprenticeship Level 3 Team Leader and Supervisor</h3>
       <p><strong><a href="https://www.hyperisland.com/" target="_blank">Hyper Island</a></strong></p>
     </div>
 
@@ -606,9 +747,6 @@ footer {
     <div class="skills-box">
       <h3>Italian</h3>
       <ul><li>Native</li></ul>
-    </div>
-
-    <div class="skills-box">
       <h3>English</h3>
       <ul><li>Fluent</li></ul>
     </div>

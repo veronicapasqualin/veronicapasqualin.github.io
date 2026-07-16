@@ -494,6 +494,54 @@ footer {
 #languages .skills-box li{
     margin-bottom:10px;
 }
+
+/* ===== Language Switch ===== */
+
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 5px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+.lang-switch button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: .2s;
+}
+
+.lang-switch button.active {
+  opacity: 1;
+  background: var(--bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .lang-switch button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
 </style>
 </head>
 
@@ -504,37 +552,44 @@ footer {
 <nav>
   <div class="logo">Veronica Pasqualin</div>
 
-  <button class="menu-toggle" id="menu-toggle">☰</button>
+  <div class="nav-right">
+    <div class="lang-switch" id="lang-switch">
+      <button data-lang="it" aria-label="Italiano" title="Italiano">🇮🇹</button>
+      <button data-lang="en" aria-label="English" title="English">🇬🇧</button>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
 
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Case Studies</a></li>
-    <li><a href="#tools">Veronica AI Assistant</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#languages">Languages</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" data-en="About" data-it="Chi Sono">About</a></li>
+    <li><a href="#projects" data-en="Case Studies" data-it="Casi Studio">Case Studies</a></li>
+    <li><a href="#tools" data-en="Veronica AI Assistant" data-it="Assistente AI di Veronica">Veronica AI Assistant</a></li>
+    <li><a href="#skills" data-en="Skills" data-it="Competenze">Skills</a></li>
+    <li><a href="#experience" data-en="Experience" data-it="Esperienza">Experience</a></li>
+    <li><a href="#education" data-en="Education" data-it="Istruzione">Education</a></li>
+    <li><a href="#languages" data-en="Languages" data-it="Lingue">Languages</a></li>
+    <li><a href="#contact" data-en="Contact" data-it="Contatti">Contact</a></li>
   </ul>
 </nav>
 
 <header>
   <img src="profile.jpg" alt="Veronica Pasqualin">
   <h1>Veronica Pasqualin</h1>
-  <p>International Digital Marketing Manager | SEO | PPC | GEO | AI-driven Search</p>
-  <p class="hero-sub">
+  <p data-en="International Digital Marketing Manager | SEO | PPC | GEO | AI-driven Search" data-it="Responsabile Marketing Digitale Internazionale | SEO | PPC | GEO | Ricerca guidata dall'AI">International Digital Marketing Manager | SEO | PPC | GEO | AI-driven Search</p>
+  <p class="hero-sub" data-en="Helping brands stay visible across traditional search engines and emerging AI-driven discovery platforms." data-it="Aiuto i brand a restare visibili sui motori di ricerca tradizionali e sulle nuove piattaforme di scoperta basate sull'AI.">
     Helping brands stay visible across traditional search engines and emerging AI-driven discovery platforms.
   </p>
 </header>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p class="section-intro">
+  <h2 data-en="About Me" data-it="Chi Sono">About Me</h2>
+  <p class="section-intro" data-en="International Digital Marketing Manager with 8+ years of experience across PPC, SEO, GEO and AI-driven search." data-it="Responsabile Marketing Digitale Internazionale con oltre 8 anni di esperienza in PPC, SEO, GEO e ricerca basata sull'AI.">
     International Digital Marketing Manager with 8+ years of experience across PPC, SEO, GEO and AI-driven search.
   </p>
 
   <div class="about-box">
-    <p>
+    <p data-en="I work at the intersection of international search, performance marketing, analytics and AI. My focus is helping brands stay discoverable across both traditional and AI-powered search ecosystems." data-it="Lavoro all'intersezione tra ricerca internazionale, performance marketing, analytics e AI. Il mio obiettivo è aiutare i brand a rimanere individuabili sia negli ecosistemi di ricerca tradizionali che in quelli basati sull'AI.">
       I work at the intersection of international search, performance marketing, analytics and AI.
       My focus is helping brands stay discoverable across both traditional and AI-powered search ecosystems.
     </p>
@@ -542,59 +597,59 @@ footer {
 </section>
 
 <section id="projects">
-  <h2>Case Studies</h2>
-  <p class="section-intro">
+  <h2 data-en="Case Studies" data-it="Casi Studio">Case Studies</h2>
+  <p class="section-intro" data-en="Selected portfolio projects showing how I combine international search strategy, data analysis and AI-driven decision making." data-it="Progetti selezionati del portfolio che mostrano come combino strategia di ricerca internazionale, analisi dei dati e decisioni guidate dall'AI.">
     Selected portfolio projects showing how I combine international search strategy, data analysis and AI-driven decision making.
   </p>
 
   <div class="grid">
 
     <div class="card">
-      <h3>Market Expansion Revenue Predictor</h3>
-      <p>
+      <h3 data-en="Market Expansion Revenue Predictor" data-it="Previsore di Ricavi per l'Espansione di Mercato">Market Expansion Revenue Predictor</h3>
+      <p data-en="Built an interactive regression-based dashboard to simulate international market expansion scenarios, forecasting clicks, conversions, revenue, CPA, ROAS and profitability based on budget and market conditions." data-it="Ho creato una dashboard interattiva basata su modelli di regressione per simulare scenari di espansione internazionale, prevedendo click, conversioni, ricavi, CPA, ROAS e redditività in base a budget e condizioni di mercato.">
         Built an interactive regression-based dashboard to simulate international market expansion scenarios,
         forecasting clicks, conversions, revenue, CPA, ROAS and profitability based on budget and market conditions.
       </p>
       <div class="project-actions">
-  <a href="https://international-revenue-predictor-ncyvdmrivaappxspexkgoql.streamlit.app/" 
-   class="project-link" 
+  <a href="https://international-revenue-predictor-ncyvdmrivaappxspexkgoql.streamlit.app/"
+   class="project-link"
    target="_blank">
-   View Live Dashboard →
+   <span data-en="View Live Dashboard →" data-it="Vedi la Dashboard dal Vivo →">View Live Dashboard →</span>
 </a>
 
   <a href="market-entry-strategy.html" class="project-link secondary-link">
-    View Strategy Approach →
+    <span data-en="View Strategy Approach →" data-it="Vedi l'Approccio Strategico →">View Strategy Approach →</span>
   </a>
 </div>
     </div>
 
     <div class="card">
-  <h3>AI Search Visibility</h3>
-  <p>
+  <h3 data-en="AI Search Visibility" data-it="Visibilità nella Ricerca AI">AI Search Visibility</h3>
+  <p data-en="Optimised entity visibility, structured content and AI discoverability across evolving search ecosystems." data-it="Ottimizzata la visibilità delle entità, i contenuti strutturati e la rilevabilità AI negli ecosistemi di ricerca in evoluzione.">
     Optimised entity visibility, structured content and AI discoverability across evolving search ecosystems.
   </p>
 
   <div class="project-actions">
     <a href="hospitality-visibility-agent.html" class="project-link">
-      View AI Agent and Approach →
+      <span data-en="View AI Agent and Approach →" data-it="Vedi l'Agente AI e l'Approccio →">View AI Agent and Approach →</span>
     </a>
   </div>
 </div>
     <div class="card">
-      <h3>CRO & Lead Optimisation</h3>
-      <p>
+      <h3 data-en="CRO &amp; Lead Optimisation" data-it="CRO e Ottimizzazione dei Lead">CRO &amp; Lead Optimisation</h3>
+      <p data-en="Improved conversion quality through landing page optimisation, funnel analysis and user journey optimisation." data-it="Migliorata la qualità delle conversioni tramite l'ottimizzazione delle landing page, l'analisi del funnel e l'ottimizzazione del percorso utente.">
         Improved conversion quality through landing page optimisation, funnel analysis and user journey optimisation.
       </p>
     </div>
     <div class="card">
-  <h3>Paid Media & Channel Strategy</h3>
-  <p>
+  <h3 data-en="Paid Media &amp; Channel Strategy" data-it="Paid Media e Strategia dei Canali">Paid Media &amp; Channel Strategy</h3>
+  <p data-en="Built a strategic framework to analyse category demand, brand demand, audience behaviour and creative insights, connecting Google Ads and Meta into one integrated growth system." data-it="Costruito un framework strategico per analizzare la domanda di categoria, la domanda di brand, il comportamento del pubblico e gli insight creativi, collegando Google Ads e Meta in un unico sistema di crescita integrato.">
     Built a strategic framework to analyse category demand, brand demand, audience behaviour and creative insights, connecting Google Ads and Meta into one integrated growth system.
   </p>
 
   <div class="project-actions">
     <a href="demand-channel-strategy.html" class="project-link">
-      View Strategy Approach →
+      <span data-en="View Strategy Approach →" data-it="Vedi l'Approccio Strategico →">View Strategy Approach →</span>
     </a>
   </div>
 </div>
@@ -603,15 +658,15 @@ footer {
 
 <section class="assistant-cta" id="tools">
 
-    <h2>🤖 Veronica AI Assistant</h2>
+    <h2 data-en="🤖 Veronica AI Assistant" data-it="🤖 Assistente AI di Veronica">🤖 Veronica AI Assistant</h2>
 
-    <p>
+    <p data-en="Skip the scrolling. Ask my AI assistant anything about my experience, international projects, AI case studies, technical skills or achievements." data-it="Salta lo scrolling. Chiedi al mio assistente AI qualsiasi cosa sulla mia esperienza, i progetti internazionali, i casi studio sull'AI, le competenze tecniche o i risultati raggiunti.">
         Skip the scrolling. Ask my AI assistant anything about my experience,
         international projects, AI case studies, technical skills or achievements.
     </p>
 
     <a href="https://chatbot-veronica-cqjvzn7tavyrs66rx2femr.streamlit.app/" class="btn">
-        💬 Ask Veronica AI
+        <span data-en="💬 Ask Veronica AI" data-it="💬 Chiedi a Veronica AI">💬 Ask Veronica AI</span>
     </a>
 
 </section>
@@ -619,55 +674,55 @@ footer {
   </div>
 </section>
 <section id="skills">
-  <h2>Skills &amp; Tools</h2>
+  <h2 data-en="Skills &amp; Tools" data-it="Competenze e Strumenti">Skills &amp; Tools</h2>
 
-  <p class="section-intro">
+  <p class="section-intro" data-en="Strategic, analytical and technical capabilities across international digital marketing, artificial intelligence and digital growth." data-it="Capacità strategiche, analitiche e tecniche nel marketing digitale internazionale, nell'intelligenza artificiale e nella crescita digitale.">
     Strategic, analytical and technical capabilities across international digital marketing,
     artificial intelligence and digital growth.
   </p>
 
-  <h3 class="skills-group-title">Core Skills</h3>
+  <h3 class="skills-group-title" data-en="Core Skills" data-it="Competenze Principali">Core Skills</h3>
 
   <div class="skills-columns core-skills-grid">
 
     <div class="skills-box">
-      <h3>International Strategy</h3>
+      <h3 data-en="International Strategy" data-it="Strategia Internazionale">International Strategy</h3>
       <ul>
-        <li>International digital strategy</li>
-        <li>Market expansion</li>
-        <li>Localisation</li>
-        <li>Multi-market campaign planning</li>
+        <li data-en="International digital strategy" data-it="Strategia digitale internazionale">International digital strategy</li>
+        <li data-en="Market expansion" data-it="Espansione di mercato">Market expansion</li>
+        <li data-en="Localisation" data-it="Localizzazione">Localisation</li>
+        <li data-en="Multi-market campaign planning" data-it="Pianificazione di campagne multi-mercato">Multi-market campaign planning</li>
       </ul>
     </div>
 
     <div class="skills-box">
-      <h3>Search &amp; Growth</h3>
+      <h3 data-en="Search &amp; Growth" data-it="Ricerca e Crescita">Search &amp; Growth</h3>
       <ul>
-        <li>SEO, PPC and GEO</li>
-        <li>Growth marketing</li>
-        <li>Conversion rate optimisation</li>
-        <li>Data analysis</li>
+        <li data-en="SEO, PPC and GEO" data-it="SEO, PPC e GEO">SEO, PPC and GEO</li>
+        <li data-en="Growth marketing" data-it="Growth marketing">Growth marketing</li>
+        <li data-en="Conversion rate optimisation" data-it="Ottimizzazione del tasso di conversione">Conversion rate optimisation</li>
+        <li data-en="Data analysis" data-it="Analisi dei dati">Data analysis</li>
       </ul>
     </div>
 
     <div class="skills-box">
-      <h3>AI &amp; Emerging Search</h3>
+      <h3 data-en="AI &amp; Emerging Search" data-it="AI e Ricerca Emergente">AI &amp; Emerging Search</h3>
       <ul>
-        <li>AI-assisted workflows</li>
-        <li>Large Language Models</li>
-        <li>AI-driven search visibility</li>
-        <li>Generative discovery strategy</li>
+        <li data-en="AI-assisted workflows" data-it="Flussi di lavoro assistiti dall'AI">AI-assisted workflows</li>
+        <li data-en="Large Language Models" data-it="Large Language Models">Large Language Models</li>
+        <li data-en="AI-driven search visibility" data-it="Visibilità nella ricerca guidata dall'AI">AI-driven search visibility</li>
+        <li data-en="Generative discovery strategy" data-it="Strategia di scoperta generativa">Generative discovery strategy</li>
       </ul>
     </div>
 
   </div>
 
-  <h3 class="skills-group-title tools-title">Tools &amp; Platforms</h3>
+  <h3 class="skills-group-title tools-title" data-en="Tools &amp; Platforms" data-it="Strumenti e Piattaforme">Tools &amp; Platforms</h3>
 
   <div class="skills-columns">
 
     <div class="skills-box">
-      <h3>Paid Media</h3>
+      <h3 data-en="Paid Media" data-it="Media a Pagamento">Paid Media</h3>
       <ul>
         <li>Google Ads</li>
         <li>Microsoft Ads</li>
@@ -680,7 +735,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>Creative</h3>
+      <h3 data-en="Creative" data-it="Creatività">Creative</h3>
       <ul>
         <li>Meta AI</li>
         <li>Meta Business Suite</li>
@@ -692,7 +747,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>SEO &amp; Market Intelligence</h3>
+      <h3 data-en="SEO &amp; Market Intelligence" data-it="SEO e Market Intelligence">SEO &amp; Market Intelligence</h3>
       <ul>
         <li>Google Search Console</li>
         <li>Screaming Frog SEO</li>
@@ -712,7 +767,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>Analytics</h3>
+      <h3 data-en="Analytics" data-it="Analytics">Analytics</h3>
       <ul>
         <li>Google Analytics 4</li>
         <li>Google Tag Manager</li>
@@ -725,7 +780,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>CRM</h3>
+      <h3 data-en="CRM" data-it="CRM">CRM</h3>
       <ul>
         <li>HubSpot</li>
         <li>Salesforce</li>
@@ -734,7 +789,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>CMS</h3>
+      <h3 data-en="CMS" data-it="CMS">CMS</h3>
       <ul>
         <li>WordPress</li>
         <li>Shopify</li>
@@ -743,7 +798,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>LLMs</h3>
+      <h3 data-en="LLMs" data-it="LLM">LLMs</h3>
       <ul>
         <li>ChatGPT</li>
         <li>Google Gemini</li>
@@ -753,7 +808,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>Programming</h3>
+      <h3 data-en="Programming" data-it="Programmazione">Programming</h3>
       <ul>
         <li>Python</li>
         <li>Pandas</li>
@@ -767,7 +822,7 @@ footer {
     </div>
 
     <div class="skills-box">
-      <h3>Automation</h3>
+      <h3 data-en="Automation" data-it="Automazione">Automation</h3>
       <ul>
         <li>Make</li>
         <li>n8n</li>
@@ -778,27 +833,27 @@ footer {
 </section>
 
 <section id="experience">
-  <h2>Experience</h2>
+  <h2 data-en="Experience" data-it="Esperienza">Experience</h2>
 
   <div class="timeline">
 
     <div class="timeline-item">
-      <h3>Senior International Digital Campaign Manager</h3>
-      <p><strong><a href="https://www.havasmarket.com/" target="_blank">Havas Market</a></strong> | 2021 – Present</p>
+      <h3 data-en="Senior International Digital Campaign Manager" data-it="Senior International Digital Campaign Manager">Senior International Digital Campaign Manager</h3>
+      <p><strong><a href="https://www.havasmarket.com/" target="_blank">Havas Market</a></strong> | <span data-en="2021 – Present" data-it="2021 – Presente">2021 – Present</span></p>
     </div>
 
     <div class="timeline-item">
-      <h3>Digital Marketing & Content Specialist</h3>
+      <h3 data-en="Digital Marketing & Content Specialist" data-it="Specialista di Digital Marketing e Contenuti">Digital Marketing & Content Specialist</h3>
       <p><strong><a href="https://www.digital360.it/" target="_blank">Digital 360</a></strong> | 2021</p>
     </div>
 
     <div class="timeline-item">
-      <h3>Digital Marketing & Content Strategist</h3>
+      <h3 data-en="Digital Marketing & Content Strategist" data-it="Strategist di Digital Marketing e Contenuti">Digital Marketing & Content Strategist</h3>
       <p><strong><a href="https://www.gabrielesaccenti.com/" target="_blank">Gabriele Saccenti SRL</a></strong> | 2019 – 2021</p>
     </div>
 
     <div class="timeline-item">
-      <h3>Junior Marketing Communication Manager</h3>
+      <h3 data-en="Junior Marketing Communication Manager" data-it="Responsabile Junior di Comunicazione Marketing">Junior Marketing Communication Manager</h3>
       <p><strong><a href="https://www.ballarini.it/" target="_blank">Ballarini</a></strong> | 2018 – 2019</p>
     </div>
 
@@ -806,65 +861,65 @@ footer {
 </section>
 
 <section id="education">
-  <h2>Education</h2>
+  <h2 data-en="Education" data-it="Istruzione">Education</h2>
 
   <div class="timeline">
     <div class="timeline-item">
-      <h3>MSc Artificial Intelligence</h3>
+      <h3 data-en="MSc Artificial Intelligence" data-it="Laurea Magistrale in Intelligenza Artificiale">MSc Artificial Intelligence</h3>
       <p><strong><a href="https://www.bath.ac.uk/" target="_blank">University of Bath</a></strong></p>
     </div>
 
     <div class="timeline-item">
-      <h3>Apprenticeship Level 3 Team Leader and Supervisor</h3>
+      <h3 data-en="Apprenticeship Level 3 Team Leader and Supervisor" data-it="Apprendistato Livello 3 - Team Leader e Supervisore">Apprenticeship Level 3 Team Leader and Supervisor</h3>
       <p><strong><a href="https://www.hyperisland.com/" target="_blank">Hyper Island</a></strong></p>
     </div>
 
     <div class="timeline-item">
-      <h3>MSc Trade and Consumer Marketing</h3>
+      <h3 data-en="MSc Trade and Consumer Marketing" data-it="Laurea Magistrale in Trade e Consumer Marketing">MSc Trade and Consumer Marketing</h3>
       <p><strong><a href="https://www.unipr.it/" target="_blank">Università di Parma</a></strong></p>
     </div>
 
     <div class="timeline-item">
-      <h3>BA International Marketing</h3>
+      <h3 data-en="BA International Marketing" data-it="Laurea Triennale in Marketing Internazionale">BA International Marketing</h3>
       <p><strong><a href="https://www.unipr.it/" target="_blank">Università di Parma</a></strong></p>
     </div>
   </div>
 </section>
 
 <section id="languages">
-  <h2>Languages</h2>
+  <h2 data-en="Languages" data-it="Lingue">Languages</h2>
 
   <div class="skills-columns">
     <div class="skills-box">
-      <h3>Italian</h3>
-      <ul><li>Native</li></ul>
-      <h3>English</h3>
-      <ul><li>Fluent</li></ul>
+      <h3 data-en="Italian" data-it="Italiano">Italian</h3>
+      <ul><li data-en="Native" data-it="Madrelingua">Native</li></ul>
+      <h3 data-en="English" data-it="Inglese">English</h3>
+      <ul><li data-en="Fluent" data-it="Fluente">Fluent</li></ul>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Let’s Connect</h2>
-  <p class="section-intro">
+  <h2 data-en="Let’s Connect" data-it="Connettiamoci">Let’s Connect</h2>
+  <p class="section-intro" data-en="Open to new opportunities, collaborations and conversations around search, AI and digital growth." data-it="Aperta a nuove opportunità, collaborazioni e conversazioni su ricerca, AI e crescita digitale.">
     Open to new opportunities, collaborations and conversations around search, AI and digital growth.
   </p>
 
   <div class="contact-box">
-    <p>
+    <p data-en="If you're hiring, building something interesting, or simply want to connect and exchange ideas." data-it="Se stai assumendo, stai costruendo qualcosa di interessante, o vuoi semplicemente entrare in contatto e scambiare idee.">
       If you're hiring, building something interesting, or simply want to connect and exchange ideas.
     </p>
 
     <div class="contact-links">
       <a href="https://github.com/veronicapasqualin" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/veronica-pasqualin/" target="_blank">LinkedIn</a>
-      <a href="mailto:pasqualin.veronica@gmail.com">Email</a>
-      <a href="https://calendly.com/pasqualin-veronica/let-s-connect" target="_blank">Let’s Connect</a>
+      <a href="mailto:pasqualin.veronica@gmail.com" data-en="Email" data-it="Email">Email</a>
+      <a href="https://calendly.com/pasqualin-veronica/let-s-connect" target="_blank" data-en="Let’s Connect" data-it="Connettiamoci">Let’s Connect</a>
     </div>
   </div>
 </section>
 
-<footer>
+<footer data-en="© 2026 Veronica Pasqualin — Open to new opportunities in Search, AI and Digital Growth" data-it="© 2026 Veronica Pasqualin — Aperta a nuove opportunità in Ricerca, AI e Crescita Digitale">
   © 2026 Veronica Pasqualin — Open to new opportunities in Search, AI and Digital Growth
 </footer>
 
@@ -903,7 +958,33 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     menuToggle.textContent = "☰";
   });
 });
+
+// ===== Language switch (EN / IT) =====
+const langButtons = document.querySelectorAll("#lang-switch button");
+const translatable = document.querySelectorAll("[data-en]");
+
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  translatable.forEach(el => {
+    const text = lang === "it" ? el.dataset.it : el.dataset.en;
+    if (text !== undefined) el.textContent = text;
+  });
+
+  langButtons.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+
+  localStorage.setItem("lang", lang);
+}
+
+langButtons.forEach(btn => {
+  btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
+});
+
+applyLanguage(localStorage.getItem("lang") || "en");
 </script>
 
 </body>
 </html>
+

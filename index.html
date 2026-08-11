@@ -703,6 +703,70 @@ footer {
     font-size: 16px;
   }
 }
+
+/* ===== FAQ Accordion ===== */
+
+.faq-item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.faq-item .faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+  padding: 26px 30px;
+}
+
+.faq-item .faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item .faq-question h3 {
+  margin: 0;
+  font-size: 19px;
+  color: var(--text);
+}
+
+.faq-item .faq-question::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-top: -4px;
+  border-right: 2px solid var(--accent-dark);
+  border-bottom: 2px solid var(--accent-dark);
+  transform: rotate(45deg);
+  transition: transform .2s ease, margin-top .2s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] .faq-question::after {
+  transform: rotate(225deg);
+  margin-top: 4px;
+}
+
+.faq-item .faq-answer {
+  padding: 0 30px 26px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.faq-item .faq-answer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-item .faq-question {
+    padding: 20px 24px;
+  }
+
+  .faq-item .faq-answer {
+    padding: 20px 24px 24px;
+  }
+}
 </style>
 </head>
 
@@ -1068,40 +1132,50 @@ footer {
 
   <div class="timeline">
 
-    <div class="timeline-item">
-      <h3 data-en="Why should you hire me?" data-it="Perché dovresti assumermi?">Why should you hire me?</h3>
-      <p data-en="As an International Performance Digital Marketing Manager with 8+ years of experience, I turn performance marketing into measurable growth, across Google Ads, Meta, LinkedIn, TikTok and YouTube, in multiple markets and languages. I combine that multichannel, data-driven performance background with hands-on SEO, PPC and GEO expertise, plus the technical grounding of an MSc in Artificial Intelligence (in progress, University of Bath), so I don't just follow AI search trends, I understand how the underlying models actually retrieve and rank content. Hire me if you need someone who connects performance, multichannel strategy and AI-driven search into one growth system, not three separate specialists." data-it="Come International Performance Digital Marketing Manager con oltre 8 anni di esperienza, trasformo il performance marketing in crescita misurabile, su Google Ads, Meta, LinkedIn, TikTok e YouTube, in mercati e lingue diverse. Unisco questo background multicanale e data-driven a competenze pratiche in SEO, PPC e GEO, oltre alle basi tecniche di un Master in Intelligenza Artificiale (in corso, University of Bath), quindi non mi limito a seguire i trend della ricerca AI, capisco davvero come i modelli sottostanti recuperano e classificano i contenuti. Assumimi se cerchi qualcuno capace di unire performance, strategia multicanale e ricerca guidata dall'AI in un unico sistema di crescita, non tre specialisti separati.">
-        As an International Performance Digital Marketing Manager with 8+ years of experience, I turn performance marketing into measurable growth, across Google Ads, Meta, LinkedIn, TikTok and YouTube, in multiple markets and languages. I combine that multichannel, data-driven performance background with hands-on SEO, PPC and GEO expertise, plus the technical grounding of an MSc in Artificial Intelligence (in progress, University of Bath), so I don't just follow AI search trends, I understand how the underlying models actually retrieve and rank content. Hire me if you need someone who connects performance, multichannel strategy and AI-driven search into one growth system, not three separate specialists.
-      </p>
-    </div>
+    <details class="timeline-item faq-item">
+      <summary class="faq-question"><h3 data-en="Why should you hire me?" data-it="Perché dovresti assumermi?">Why should you hire me?</h3></summary>
+      <div class="faq-answer">
+        <p data-en="As an International Performance Digital Marketing Manager with 8+ years of experience, I turn performance marketing into measurable growth, across Google Ads, Meta, LinkedIn, TikTok and YouTube, in multiple markets and languages. I combine that multichannel, data-driven performance background with hands-on SEO, PPC and GEO expertise, plus the technical grounding of an MSc in Artificial Intelligence (in progress, University of Bath), so I don't just follow AI search trends, I understand how the underlying models actually retrieve and rank content. Hire me if you need someone who connects performance, multichannel strategy and AI-driven search into one growth system, not three separate specialists." data-it="Come International Performance Digital Marketing Manager con oltre 8 anni di esperienza, trasformo il performance marketing in crescita misurabile, su Google Ads, Meta, LinkedIn, TikTok e YouTube, in mercati e lingue diverse. Unisco questo background multicanale e data-driven a competenze pratiche in SEO, PPC e GEO, oltre alle basi tecniche di un Master in Intelligenza Artificiale (in corso, University of Bath), quindi non mi limito a seguire i trend della ricerca AI, capisco davvero come i modelli sottostanti recuperano e classificano i contenuti. Assumimi se cerchi qualcuno capace di unire performance, strategia multicanale e ricerca guidata dall'AI in un unico sistema di crescita, non tre specialisti separati.">
+          As an International Performance Digital Marketing Manager with 8+ years of experience, I turn performance marketing into measurable growth, across Google Ads, Meta, LinkedIn, TikTok and YouTube, in multiple markets and languages. I combine that multichannel, data-driven performance background with hands-on SEO, PPC and GEO expertise, plus the technical grounding of an MSc in Artificial Intelligence (in progress, University of Bath), so I don't just follow AI search trends, I understand how the underlying models actually retrieve and rank content. Hire me if you need someone who connects performance, multichannel strategy and AI-driven search into one growth system, not three separate specialists.
+        </p>
+      </div>
+    </details>
 
-    <div class="timeline-item">
-      <h3 data-en="What do I mean by GEO, and why does it matter for your company?" data-it="Cosa intendo per GEO, e perché è importante per la tua azienda?">What do I mean by GEO, and why does it matter for your company?</h3>
-      <p data-en="GEO is the practice of optimising content so it is retrieved, understood and cited by AI systems such as ChatGPT, Gemini and Perplexity, rather than only ranking in traditional search engines. I apply GEO principles - clear entity signals, structured data, self-contained answers and E-E-A-T - to help companies like yours become sources that AI assistants choose to cite." data-it="La GEO è la pratica di ottimizzare i contenuti affinché vengano recuperati, compresi e citati da sistemi AI come ChatGPT, Gemini e Perplexity, oltre che posizionati sui motori di ricerca tradizionali. Applico i principi GEO - segnali di entità chiari, dati strutturati, risposte autonome ed E-E-A-T - per aiutare aziende come la tua a diventare fonti che gli assistenti AI scelgono di citare.">
-        GEO is the practice of optimising content so it is retrieved, understood and cited by AI systems such as ChatGPT, Gemini and Perplexity, rather than only ranking in traditional search engines. I apply GEO principles - clear entity signals, structured data, self-contained answers and E-E-A-T - to help companies like yours become sources that AI assistants choose to cite.
-      </p>
-    </div>
+    <details class="timeline-item faq-item">
+      <summary class="faq-question"><h3 data-en="What do I mean by GEO, and why does it matter for your company?" data-it="Cosa intendo per GEO, e perché è importante per la tua azienda?">What do I mean by GEO, and why does it matter for your company?</h3></summary>
+      <div class="faq-answer">
+        <p data-en="GEO is the practice of optimising content so it is retrieved, understood and cited by AI systems such as ChatGPT, Gemini and Perplexity, rather than only ranking in traditional search engines. I apply GEO principles - clear entity signals, structured data, self-contained answers and E-E-A-T - to help companies like yours become sources that AI assistants choose to cite." data-it="La GEO è la pratica di ottimizzare i contenuti affinché vengano recuperati, compresi e citati da sistemi AI come ChatGPT, Gemini e Perplexity, oltre che posizionati sui motori di ricerca tradizionali. Applico i principi GEO - segnali di entità chiari, dati strutturati, risposte autonome ed E-E-A-T - per aiutare aziende come la tua a diventare fonti che gli assistenti AI scelgono di citare.">
+          GEO is the practice of optimising content so it is retrieved, understood and cited by AI systems such as ChatGPT, Gemini and Perplexity, rather than only ranking in traditional search engines. I apply GEO principles - clear entity signals, structured data, self-contained answers and E-E-A-T - to help companies like yours become sources that AI assistants choose to cite.
+        </p>
+      </div>
+    </details>
 
-    <div class="timeline-item">
-      <h3 data-en="What GEO experience do I have, and why is it fundamental?" data-it="Che esperienza ho nella GEO, e perché è fondamentale?">What GEO experience do I have, and why is it fundamental?</h3>
-      <p data-en="I believe SEO is no longer just about ranking on Google - it's about being found across the wider AI-powered search ecosystem, from ChatGPT and Perplexity to Gemini and AI Overviews. That means introducing GEO, AEO and AIO as core foundations of the discoverability strategy: things like entity optimisation, AI crawlability, structured data and content retrievability are core priorities. I've been building GEO, AEO and AIO into my strategy from the start. Besides, I'm currently studying for an MSc in Artificial Intelligence at the University of Bath, which is giving me the technical grounding - in retrieval, tokenisation and how language models process content - to apply GEO as an engineering discipline, not just a marketing trend. If you want your company to be found and cited by AI search tools, I can help you build that visibility from the ground up." data-it="Credo che la SEO non riguardi più solo il posizionamento su Google, ma l'essere trovati in tutto l'ecosistema di ricerca basato sull'AI, da ChatGPT e Perplexity a Gemini e le AI Overview. Questo significa introdurre GEO, AEO e AIO come fondamenta centrali della strategia di discoverability: elementi come entity optimisation, AI crawlability, dati strutturati e recuperabilità dei contenuti sono priorità centrali. Ho integrato GEO, AEO e AIO nella mia strategia fin dall'inizio. Inoltre, sto studiando per un Master in Intelligenza Artificiale alla University of Bath, che mi sta offrendo le basi tecniche - su retrieval, tokenizzazione e come i modelli linguistici elaborano i contenuti - per applicare la GEO come disciplina ingegneristica, non solo come trend di marketing. Se vuoi che la tua azienda venga trovata e citata dagli strumenti di ricerca AI, posso aiutarti a costruire questa visibilità da zero.">
-        I believe SEO is no longer just about ranking on Google - it's about being found across the wider AI-powered search ecosystem, from ChatGPT and Perplexity to Gemini and AI Overviews. That means introducing GEO, AEO and AIO as core foundations of the discoverability strategy: things like entity optimisation, AI crawlability, structured data and content retrievability are core priorities. I've been building GEO, AEO and AIO into my strategy from the start. Besides, I'm currently studying for an MSc in Artificial Intelligence at the University of Bath, which is giving me the technical grounding - in retrieval, tokenisation and how language models process content - to apply GEO as an engineering discipline, not just a marketing trend. If you want your company to be found and cited by AI search tools, I can help you build that visibility from the ground up.
-      </p>
-    </div>
+    <details class="timeline-item faq-item">
+      <summary class="faq-question"><h3 data-en="What GEO experience do I have, and why is it fundamental?" data-it="Che esperienza ho nella GEO, e perché è fondamentale?">What GEO experience do I have, and why is it fundamental?</h3></summary>
+      <div class="faq-answer">
+        <p data-en="I believe SEO is no longer just about ranking on Google - it's about being found across the wider AI-powered search ecosystem, from ChatGPT and Perplexity to Gemini and AI Overviews. That means introducing GEO, AEO and AIO as core foundations of the discoverability strategy: things like entity optimisation, AI crawlability, structured data and content retrievability are core priorities. I've been building GEO, AEO and AIO into my strategy from the start. Besides, I'm currently studying for an MSc in Artificial Intelligence at the University of Bath, which is giving me the technical grounding - in retrieval, tokenisation and how language models process content - to apply GEO as an engineering discipline, not just a marketing trend. If you want your company to be found and cited by AI search tools, I can help you build that visibility from the ground up." data-it="Credo che la SEO non riguardi più solo il posizionamento su Google, ma l'essere trovati in tutto l'ecosistema di ricerca basato sull'AI, da ChatGPT e Perplexity a Gemini e le AI Overview. Questo significa introdurre GEO, AEO e AIO come fondamenta centrali della strategia di discoverability: elementi come entity optimisation, AI crawlability, dati strutturati e recuperabilità dei contenuti sono priorità centrali. Ho integrato GEO, AEO e AIO nella mia strategia fin dall'inizio. Inoltre, sto studiando per un Master in Intelligenza Artificiale alla University of Bath, che mi sta offrendo le basi tecniche - su retrieval, tokenizzazione e come i modelli linguistici elaborano i contenuti - per applicare la GEO come disciplina ingegneristica, non solo come trend di marketing. Se vuoi che la tua azienda venga trovata e citata dagli strumenti di ricerca AI, posso aiutarti a costruire questa visibilità da zero.">
+          I believe SEO is no longer just about ranking on Google - it's about being found across the wider AI-powered search ecosystem, from ChatGPT and Perplexity to Gemini and AI Overviews. That means introducing GEO, AEO and AIO as core foundations of the discoverability strategy: things like entity optimisation, AI crawlability, structured data and content retrievability are core priorities. I've been building GEO, AEO and AIO into my strategy from the start. Besides, I'm currently studying for an MSc in Artificial Intelligence at the University of Bath, which is giving me the technical grounding - in retrieval, tokenisation and how language models process content - to apply GEO as an engineering discipline, not just a marketing trend. If you want your company to be found and cited by AI search tools, I can help you build that visibility from the ground up.
+        </p>
+      </div>
+    </details>
 
-    <div class="timeline-item">
-      <h3 data-en="What tools and platforms do I use to grow your visibility?" data-it="Quali strumenti e piattaforme uso per far crescere la tua visibilità?">What tools and platforms do I use to grow your visibility?</h3>
-      <p data-en="I work across paid media platforms (Google Ads, Microsoft Ads, Meta Ads Manager), SEO and market intelligence tools (Google Search Console, SEMrush, Ahrefs), analytics (Google Analytics 4, Looker Studio), programming (Python, Pandas, Scikit-learn) and AI tools (ChatGPT, Gemini, Perplexity, Claude Code). The full list is in the Skills & Tools section of this site." data-it="Lavoro con piattaforme di paid media (Google Ads, Microsoft Ads, Meta Ads Manager), strumenti SEO e market intelligence (Google Search Console, SEMrush, Ahrefs), analytics (Google Analytics 4, Looker Studio), programmazione (Python, Pandas, Scikit-learn) e strumenti AI (ChatGPT, Gemini, Perplexity, Claude Code). L'elenco completo è nella sezione Competenze e Strumenti di questo sito.">
-        I work across paid media platforms (Google Ads, Microsoft Ads, Meta Ads Manager), SEO and market intelligence tools (Google Search Console, SEMrush, Ahrefs), analytics (Google Analytics 4, Looker Studio), programming (Python, Pandas, Scikit-learn) and AI tools (ChatGPT, Gemini, Perplexity, Claude Code). The full list is in the Skills & Tools section of this site.
-      </p>
-    </div>
+    <details class="timeline-item faq-item">
+      <summary class="faq-question"><h3 data-en="What tools and platforms do I use to grow your visibility?" data-it="Quali strumenti e piattaforme uso per far crescere la tua visibilità?">What tools and platforms do I use to grow your visibility?</h3></summary>
+      <div class="faq-answer">
+        <p data-en="I work across paid media platforms (Google Ads, Microsoft Ads, Meta Ads Manager), SEO and market intelligence tools (Google Search Console, SEMrush, Ahrefs), analytics (Google Analytics 4, Looker Studio), programming (Python, Pandas, Scikit-learn) and AI tools (ChatGPT, Gemini, Perplexity, Claude Code). The full list is in the Skills & Tools section of this site." data-it="Lavoro con piattaforme di paid media (Google Ads, Microsoft Ads, Meta Ads Manager), strumenti SEO e market intelligence (Google Search Console, SEMrush, Ahrefs), analytics (Google Analytics 4, Looker Studio), programmazione (Python, Pandas, Scikit-learn) e strumenti AI (ChatGPT, Gemini, Perplexity, Claude Code). L'elenco completo è nella sezione Competenze e Strumenti di questo sito.">
+          I work across paid media platforms (Google Ads, Microsoft Ads, Meta Ads Manager), SEO and market intelligence tools (Google Search Console, SEMrush, Ahrefs), analytics (Google Analytics 4, Looker Studio), programming (Python, Pandas, Scikit-learn) and AI tools (ChatGPT, Gemini, Perplexity, Claude Code). The full list is in the Skills & Tools section of this site.
+        </p>
+      </div>
+    </details>
 
-    <div class="timeline-item">
-      <h3 data-en="How has my educational background helped my career?" data-it="Come mi ha aiutato il mio percorso di studi nella mia carriera?">How has my educational background helped my career?</h3>
-      <p data-en="My BA in International Marketing and MSc in Trade and Consumer Marketing, both from Università di Parma, gave me the strategic and commercial foundation for international and traditional marketing, and consumer behaviour. A Level 3 Team Leader and Supervisor apprenticeship at Hyper Island taught me better techniques to manage people and resources, skills I use every day leading international teams. I'm currently studying for an MSc in Artificial Intelligence at the University of Bath because AI literacy alone isn't enough anymore: AI needs to be integrated into every business workflow, including how you optimise performance and client strategy. That combination, marketing strategy, people leadership and technical AI expertise, is what I bring to every project." data-it="La mia Laurea Triennale in Marketing Internazionale e il Master in Trade and Consumer Marketing, entrambi conseguiti all'Università di Parma, mi hanno dato le basi strategiche e commerciali per il marketing internazionale e tradizionale, e per il comportamento del consumatore. L'Apprendistato Livello 3 come Team Leader e Supervisore presso Hyper Island mi ha insegnato tecniche migliori per gestire persone e risorse, competenze che uso ogni giorno guidando team internazionali. Sto attualmente studiando per un Master in Intelligenza Artificiale alla University of Bath perché non basta più avere solo AI literacy: l'AI va integrata in tutti i workflow aziendali, anche per ottimizzare le performance e le strategie clienti. Questa combinazione, strategia di marketing, leadership delle persone e competenza tecnica sull'AI, è quello che porto in ogni progetto.">
-        My BA in International Marketing and MSc in Trade and Consumer Marketing, both from Università di Parma, gave me the strategic and commercial foundation for international and traditional marketing, and consumer behaviour. A Level 3 Team Leader and Supervisor apprenticeship at Hyper Island taught me better techniques to manage people and resources, skills I use every day leading international teams. I'm currently studying for an MSc in Artificial Intelligence at the University of Bath because AI literacy alone isn't enough anymore: AI needs to be integrated into every business workflow, including how you optimise performance and client strategy. That combination, marketing strategy, people leadership and technical AI expertise, is what I bring to every project.
-      </p>
-    </div>
+    <details class="timeline-item faq-item">
+      <summary class="faq-question"><h3 data-en="How has my educational background helped my career?" data-it="Come mi ha aiutato il mio percorso di studi nella mia carriera?">How has my educational background helped my career?</h3></summary>
+      <div class="faq-answer">
+        <p data-en="My BA in International Marketing and MSc in Trade and Consumer Marketing, both from Università di Parma, gave me the strategic and commercial foundation for international and traditional marketing, and consumer behaviour. A Level 3 Team Leader and Supervisor apprenticeship at Hyper Island taught me better techniques to manage people and resources, skills I use every day leading international teams. I'm currently studying for an MSc in Artificial Intelligence at the University of Bath because AI literacy alone isn't enough anymore: AI needs to be integrated into every business workflow, including how you optimise performance and client strategy. That combination, marketing strategy, people leadership and technical AI expertise, is what I bring to every project." data-it="La mia Laurea Triennale in Marketing Internazionale e il Master in Trade and Consumer Marketing, entrambi conseguiti all'Università di Parma, mi hanno dato le basi strategiche e commerciali per il marketing internazionale e tradizionale, e per il comportamento del consumatore. L'Apprendistato Livello 3 come Team Leader e Supervisore presso Hyper Island mi ha insegnato tecniche migliori per gestire persone e risorse, competenze che uso ogni giorno guidando team internazionali. Sto attualmente studiando per un Master in Intelligenza Artificiale alla University of Bath perché non basta più avere solo AI literacy: l'AI va integrata in tutti i workflow aziendali, anche per ottimizzare le performance e le strategie clienti. Questa combinazione, strategia di marketing, leadership delle persone e competenza tecnica sull'AI, è quello che porto in ogni progetto.">
+          My BA in International Marketing and MSc in Trade and Consumer Marketing, both from Università di Parma, gave me the strategic and commercial foundation for international and traditional marketing, and consumer behaviour. A Level 3 Team Leader and Supervisor apprenticeship at Hyper Island taught me better techniques to manage people and resources, skills I use every day leading international teams. I'm currently studying for an MSc in Artificial Intelligence at the University of Bath because AI literacy alone isn't enough anymore: AI needs to be integrated into every business workflow, including how you optimise performance and client strategy. That combination, marketing strategy, people leadership and technical AI expertise, is what I bring to every project.
+        </p>
+      </div>
+    </details>
 
   </div>
 </section>
@@ -1194,4 +1268,6 @@ applyLanguage(localStorage.getItem("lang") || "en");
 
 </body>
 </html>
+
+
 

@@ -1,0 +1,31 @@
+# Veronica Pasqualin
+
+> International Performance Digital Marketing Manager specialising in AI-driven search, with 8+ years of experience across PPC, SEO and GEO/AEO/AIO.
+
+Veronica works at the intersection of international search, performance marketing, analytics and AI, helping brands stay discoverable across both traditional search engines (Google) and AI-powered search ecosystems (ChatGPT, Perplexity, Gemini, AI Overviews).
+
+## Background
+
+- Senior International Digital Campaign Manager at Havas Market (2021–2026), working across EMEA/APAC markets and brands.
+- Studying for an MSc in Artificial Intelligence at the University of Bath, focused on retrieval, tokenisation, and how language models process content.
+- Applies GEO (Generative Engine Optimisation) as an engineering discipline: entity optimisation, AI crawlability, structured data and content retrievability.
+
+## Core expertise
+
+- International SEO, PPC and GEO/AEO/AIO strategy
+- Paid media across Google Ads, Meta, LinkedIn, TikTok, YouTube
+- AI-driven search visibility and generative discovery strategy
+- Data analysis and Python-based marketing analytics
+
+## Pages
+
+- [Home / About](https://veronicapasqualin.github.io/): full profile, skills, experience, education, FAQ
+- [Market Entry Strategy](https://veronicapasqualin.github.io/market-entry-strategy.html): case study on an interactive regression-based revenue predictor for international market expansion
+- [AI Search Visibility (Hospitality)](https://veronicapasqualin.github.io/hospitality-visibility-agent.html): case study on entity visibility and AI discoverability
+- [Demand & Channel Strategy](https://veronicapasqualin.github.io/demand-channel-strategy.html): case study on category/brand demand analysis across Google Ads and Meta
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/veronica-pasqualin/
+- GitHub: https://github.com/veronicapasqualin
+- Email: pasqualin.veronica@gmail.com

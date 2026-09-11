@@ -19,10 +19,9 @@ Veronica works at the intersection of international search, performance marketin
 
 ## Pages
 
-- [Home / About](https://veronicapasqualin.github.io/): full profile, skills, experience, education, FAQ
-- [Market Entry Strategy](https://veronicapasqualin.github.io/market-entry-strategy.html): case study on an interactive regression-based revenue predictor for international market expansion
-- [AI Search Visibility (Hospitality)](https://veronicapasqualin.github.io/hospitality-visibility-agent.html): case study on entity visibility and AI discoverability
-- [Demand & Channel Strategy](https://veronicapasqualin.github.io/demand-channel-strategy.html): case study on category/brand demand analysis across Google Ads and Meta
+- [Home / About](https://veronicapasqualin.com/): full profile, skills, experience, education, FAQ
+- [Market Entry Strategy](https://veronicapasqualin.com/market-entry-strategy.html): case study on an interactive regression-based revenue predictor for international market expansion
+- [Knowledge Hub](https://veronicapasqualin.com/knowledge-hub.html): AI visibility, GEO and international search research
 
 ## Contact
 

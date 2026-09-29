@@ -41,4 +41,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://veronicapasqualin.com/sitemap.xml
+Sitemap: https://veronicapasqualin.github.io/sitemap.xml
